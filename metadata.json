@@ -1,0 +1,5 @@
+{
+  "name": "Vibecoding Workflow Hub",
+  "description": "An interactive documentation platform for the Vibecoding Workflow v2.1, featuring step-by-step guidance, system invariants, and layered tool analysis.",
+  "requestFramePermissions": []
+}
