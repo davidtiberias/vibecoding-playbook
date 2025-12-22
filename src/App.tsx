@@ -78,9 +78,7 @@ const App: React.FC = () => {
             {/* Left Column: List */}
             <div className="w-full lg:w-1/3">
               <div className="mb-8">
-                <h2 className="text-2xl font-bold text-slate-900">
-                  Official Protocol
-                </h2>
+                <h2 className="text-2xl font-bold text-slate-900">Workflow</h2>
                 <p className="text-slate-500 mt-2 text-sm leading-relaxed">
                   A verification-driven multi-AI loop designed for determinism.
                   Features explicit context resetting via Repo Dumps to maintain
