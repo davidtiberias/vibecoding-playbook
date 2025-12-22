@@ -1,18 +1,19 @@
-
-import React, { useState } from 'react';
-import { WORKFLOW_STEPS, SYSTEM_INVARIANTS, TOOL_ANALYSIS } from './constants';
-import { ViewType, WorkflowStep } from './types';
-import Sidebar from './components/Sidebar';
-import StepDetail from './components/StepDetail';
-import Invariants from './components/Invariants';
-import AnalysisTable from './components/AnalysisTable';
+import React, { useState } from "react";
+import { WORKFLOW_STEPS, SYSTEM_INVARIANTS, TOOL_ANALYSIS } from "./constants";
+import { ViewType, WorkflowStep } from "./types";
+import Sidebar from "./components/Sidebar";
+import StepDetail from "./components/StepDetail";
+import Invariants from "./components/Invariants";
+import AnalysisTable from "./components/AnalysisTable";
 
 const App: React.FC = () => {
-  const [activeView, setActiveView] = useState<ViewType>('workflow');
-  const [selectedStepIndex, setSelectedStepIndex] = useState<number | null>(null);
+  const [activeView, setActiveView] = useState<ViewType>("workflow");
+  const [selectedStepIndex, setSelectedStepIndex] = useState<number | null>(
+    null
+  );
 
   const handleStepSelect = (index: number) => {
-    setActiveView('workflow');
+    setActiveView("workflow");
     setSelectedStepIndex(index);
   };
 
@@ -26,27 +27,43 @@ const App: React.FC = () => {
               <span className="material-symbols-outlined font-bold">hub</span>
             </div>
             <div>
-              <h1 className="font-bold text-slate-900 leading-tight">Vibecoding Playbook</h1>
-              <p className="text-xs text-slate-500 font-medium tracking-tight">DOCUMENTATION V2.1</p>
+              <h1 className="font-bold text-slate-900 leading-tight">
+                Vibecoding Playbook
+              </h1>
+              <p className="text-xs text-slate-500 font-medium tracking-tight">
+                DOCUMENTATION V2.1
+              </p>
             </div>
           </div>
-          
+
           <nav className="hidden md:flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
             <button
-              onClick={() => setActiveView('workflow')}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${activeView === 'workflow' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-600 hover:text-indigo-600'}`}
+              onClick={() => setActiveView("workflow")}
+              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${
+                activeView === "workflow"
+                  ? "bg-white text-indigo-600 shadow-sm"
+                  : "text-slate-600 hover:text-indigo-600"
+              }`}
             >
               Workflow Map
             </button>
             <button
-              onClick={() => setActiveView('invariants')}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${activeView === 'invariants' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-600 hover:text-indigo-600'}`}
+              onClick={() => setActiveView("invariants")}
+              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${
+                activeView === "invariants"
+                  ? "bg-white text-indigo-600 shadow-sm"
+                  : "text-slate-600 hover:text-indigo-600"
+              }`}
             >
               Invariants
             </button>
             <button
-              onClick={() => setActiveView('analysis')}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${activeView === 'analysis' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-600 hover:text-indigo-600'}`}
+              onClick={() => setActiveView("analysis")}
+              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${
+                activeView === "analysis"
+                  ? "bg-white text-indigo-600 shadow-sm"
+                  : "text-slate-600 hover:text-indigo-600"
+              }`}
             >
               Analysis
             </button>
@@ -56,39 +73,47 @@ const App: React.FC = () => {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl mx-auto w-full p-4 lg:p-8 flex flex-col lg:flex-row gap-8">
-        {activeView === 'workflow' && (
+        {activeView === "workflow" && (
           <>
             {/* Left Column: List */}
             <div className="w-full lg:w-1/3">
               <div className="mb-8">
-                <h2 className="text-2xl font-bold text-slate-900">Official Protocol</h2>
+                <h2 className="text-2xl font-bold text-slate-900">
+                  Official Protocol
+                </h2>
                 <p className="text-slate-500 mt-2 text-sm leading-relaxed">
-                  A verification-driven multi-AI loop designed for determinism. Features explicit context resetting via Repo Dumps to maintain token stability.
+                  A verification-driven multi-AI loop designed for determinism.
+                  Features explicit context resetting via Repo Dumps to maintain
+                  token stability.
                 </p>
               </div>
-              <Sidebar 
-                steps={WORKFLOW_STEPS} 
-                onSelect={handleStepSelect} 
-                selectedStepIndex={selectedStepIndex} 
+              <Sidebar
+                steps={WORKFLOW_STEPS}
+                onSelect={handleStepSelect}
+                selectedStepIndex={selectedStepIndex}
               />
             </div>
 
             {/* Right Column: Details */}
             <div className="w-full lg:w-2/3">
-              <StepDetail 
-                step={selectedStepIndex !== null ? WORKFLOW_STEPS[selectedStepIndex] : null} 
+              <StepDetail
+                step={
+                  selectedStepIndex !== null
+                    ? WORKFLOW_STEPS[selectedStepIndex]
+                    : null
+                }
               />
             </div>
           </>
         )}
 
-        {activeView === 'invariants' && (
+        {activeView === "invariants" && (
           <div className="w-full">
             <Invariants invariants={SYSTEM_INVARIANTS} />
           </div>
         )}
 
-        {activeView === 'analysis' && (
+        {activeView === "analysis" && (
           <div className="w-full">
             <AnalysisTable analysis={TOOL_ANALYSIS} />
           </div>
@@ -97,15 +122,30 @@ const App: React.FC = () => {
 
       {/* Mobile Navigation Bar */}
       <nav className="md:hidden fixed bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md border border-slate-200 p-2 rounded-2xl shadow-2xl flex items-center justify-around z-50">
-        <button onClick={() => setActiveView('workflow')} className={`flex flex-col items-center gap-1 ${activeView === 'workflow' ? 'text-indigo-600' : 'text-slate-400'}`}>
+        <button
+          onClick={() => setActiveView("workflow")}
+          className={`flex flex-col items-center gap-1 ${
+            activeView === "workflow" ? "text-indigo-600" : "text-slate-400"
+          }`}
+        >
           <span className="material-symbols-outlined">account_tree</span>
           <span className="text-[10px] font-bold uppercase">Workflow</span>
         </button>
-        <button onClick={() => setActiveView('invariants')} className={`flex flex-col items-center gap-1 ${activeView === 'invariants' ? 'text-indigo-600' : 'text-slate-400'}`}>
+        <button
+          onClick={() => setActiveView("invariants")}
+          className={`flex flex-col items-center gap-1 ${
+            activeView === "invariants" ? "text-indigo-600" : "text-slate-400"
+          }`}
+        >
           <span className="material-symbols-outlined">shield</span>
           <span className="text-[10px] font-bold uppercase">Invariants</span>
         </button>
-        <button onClick={() => setActiveView('analysis')} className={`flex flex-col items-center gap-1 ${activeView === 'analysis' ? 'text-indigo-600' : 'text-slate-400'}`}>
+        <button
+          onClick={() => setActiveView("analysis")}
+          className={`flex flex-col items-center gap-1 ${
+            activeView === "analysis" ? "text-indigo-600" : "text-slate-400"
+          }`}
+        >
           <span className="material-symbols-outlined">analytics</span>
           <span className="text-[10px] font-bold uppercase">Analysis</span>
         </button>
@@ -115,7 +155,7 @@ const App: React.FC = () => {
       <footer className="py-8 border-t border-slate-200 mt-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-slate-400 text-xs font-medium tracking-wider uppercase">
-            © 2025 Vibecoding Workflow Documentation. Generated for docs/workflow.md
+            © 2025 DAVIDTIBERIAS
           </p>
         </div>
       </footer>
