@@ -26,7 +26,7 @@ const App: React.FC = () => {
               <span className="material-symbols-outlined font-bold">hub</span>
             </div>
             <div>
-              <h1 className="font-bold text-slate-900 leading-tight">Vibecoding Workflow</h1>
+              <h1 className="font-bold text-slate-900 leading-tight">Vibecoding Playbook</h1>
               <p className="text-xs text-slate-500 font-medium tracking-tight">DOCUMENTATION V2.1</p>
             </div>
           </div>
@@ -120,7 +120,7 @@ const App: React.FC = () => {
         </div>
       </footer>
 
-      {/* Floating Action Link - Main Portfolio Link */}
+      {/* Portfolio Link - Adjusted position to right-24 to avoid overlap with Chat FAB */}
       <a
         href="https://davidtiberias.github.io"
         target="_blank"
