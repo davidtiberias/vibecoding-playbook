@@ -5,6 +5,8 @@ import Sidebar from "./components/Sidebar";
 import StepDetail from "./components/StepDetail";
 import Invariants from "./components/Invariants";
 import AnalysisTable from "./components/AnalysisTable";
+import Strategy from "./components/Strategy";
+import Articles from "./components/Articles";
 
 const App: React.FC = () => {
   const [activeView, setActiveView] = useState<ViewType>("workflow");
@@ -67,6 +69,26 @@ const App: React.FC = () => {
             >
               Analysis
             </button>
+            <button
+              onClick={() => setActiveView("strategy")}
+              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${
+                activeView === "strategy"
+                  ? "bg-white text-indigo-600 shadow-sm"
+                  : "text-slate-600 hover:text-indigo-600"
+              }`}
+            >
+              Strategy
+            </button>
+            <button
+              onClick={() => setActiveView("articles")}
+              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${
+                activeView === "articles"
+                  ? "bg-white text-indigo-600 shadow-sm"
+                  : "text-slate-600 hover:text-indigo-600"
+              }`}
+            >
+              Articles
+            </button>
           </nav>
         </div>
       </header>
@@ -114,6 +136,16 @@ const App: React.FC = () => {
         {activeView === "analysis" && (
           <div className="w-full">
             <AnalysisTable analysis={TOOL_ANALYSIS} />
+          </div>
+        )}
+        {activeView === "strategy" && (
+          <div className="w-full">
+            <Strategy />
+          </div>
+        )}
+        {activeView === "articles" && (
+          <div className="w-full">
+            <Articles />
           </div>
         )}
       </main>

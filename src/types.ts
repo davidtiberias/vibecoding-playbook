@@ -1,4 +1,3 @@
-
 export interface WorkflowStep {
   id: number;
   displayId: string;
@@ -30,4 +29,10 @@ export interface ToolAnalysis {
   constraint?: string;
 }
 
-export type ViewType = 'workflow' | 'invariants' | 'analysis';
+export type ViewType =
+  | "workflow"
+  | "invariants"
+  | "analysis"
+  | "strategy"
+  | "articles"
+  | "articles";
