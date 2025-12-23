@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { WORKFLOW_STEPS, SYSTEM_INVARIANTS, TOOL_ANALYSIS } from "./constants";
-import { ViewType, WorkflowStep } from "./types";
-import Sidebar from "./components/Sidebar";
-import StepDetail from "./components/StepDetail";
-import Invariants from "./components/Invariants";
-import AnalysisTable from "./components/AnalysisTable";
-import Strategy from "./components/Strategy";
-import Articles from "./components/Articles";
+import { ViewType } from "./types";
+// src/App.tsx (after)
+import {
+  AnalysisTable,
+  Articles,
+  Invariants,
+  Sidebar,
+  StepDetail,
+  Strategy,
+  SeoManager,
+} from "./components";
 
 const App: React.FC = () => {
   const [activeView, setActiveView] = useState<ViewType>("workflow");
@@ -21,6 +25,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
+      <SeoManager activeView={activeView} /> {/* Use the manager here */}
       {/* Header */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -89,7 +94,7 @@ const App: React.FC = () => {
             href="https://davidtiberias.github.io"
             target="_blank"
             rel="noopener noreferrer"
-            className="md:hidden w-10 h-10 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 z-[100] group"
+            className="md:hidden flex w-10 h-10 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-lg items-center justify-center transition-all duration-300 hover:scale-110 z-[100] group"
             title="Visit Portfolio"
           >
             <span className="material-symbols-outlined text-2xl">person</span>
@@ -215,7 +220,7 @@ const App: React.FC = () => {
         href="https://davidtiberias.github.io"
         target="_blank"
         rel="noopener noreferrer"
-        className="hidden md:flex fixed bottom-6 right-6 w-14 h-14 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 z-[100] group"
+        className="hidden sm:flex fixed bottom-6 right-6 w-14 h-14 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 z-[100] group"
         title="Visit Portfolio"
       >
         <span className="material-symbols-outlined text-2xl">person</span>

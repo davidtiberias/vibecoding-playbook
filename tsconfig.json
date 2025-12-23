@@ -1,22 +1,41 @@
 {
   "compilerOptions": {
+    // --- Project Environment ---
     "target": "ESNext",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "jsx": "react-jsx",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
+    // --- Module Resolution ---
+    "module": "ESNext",
+    "moduleResolution": "Bundler", // Recommended for modern bundlers like Vite
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true, // Improves compatibility with older packages
+    "esModuleInterop": true, // Ensures CJS/ESM compatibility
+    // --- Strictness & Code Quality ---
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "types": ["vite/client"]
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    // --- Build Process ---
+    "isolatedModules": true, // Required by Vite for single-file transpilation
+    "noEmit": true, // Vite handles the build output, not TypeScript
+    "skipLibCheck": true, // Speeds up type checking by ignoring library files
+    "types": [
+      "vite/client"
+    ]
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src"
+  ], // This tells TypeScript to only check files within the 'src' directory
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ] // This is for Node.js-specific files like vite.config.ts
 }

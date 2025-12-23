@@ -29,9 +29,8 @@ const StepDetail: React.FC<StepDetailProps> = ({ step }) => {
     <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/60 overflow-hidden border border-slate-100 animate-fade-in sticky top-24">
       {/* Header */}
       <div
-        className={`p-8 lg:p-10 text-white relative overflow-hidden transition-colors duration-500 ${
-          step.isSystem ? "bg-rose-600" : "bg-indigo-600"
-        }`}
+        className={`p-8 lg:p-10 text-white relative overflow-hidden transition-colors duration-500 ${step.isSystem ? "bg-rose-600" : "bg-indigo-600"
+          }`}
       >
         <div className="relative z-10">
           <div className="flex items-center gap-3 mb-4">
@@ -70,11 +69,10 @@ const StepDetail: React.FC<StepDetailProps> = ({ step }) => {
         <section>
           <div className="flex items-center gap-3 mb-4">
             <div
-              className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                step.isSystem
-                  ? "bg-rose-100 text-rose-600"
-                  : "bg-indigo-100 text-indigo-600"
-              }`}
+              className={`w-8 h-8 rounded-lg flex items-center justify-center ${step.isSystem
+                ? "bg-rose-100 text-rose-600"
+                : "bg-indigo-100 text-indigo-600"
+                }`}
             >
               <span className="material-symbols-outlined text-sm">info</span>
             </div>
@@ -97,11 +95,10 @@ const StepDetail: React.FC<StepDetailProps> = ({ step }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Open ${link.label}`}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold transition-all ${
-                      step.isSystem
-                        ? "bg-rose-50 text-rose-700 hover:bg-rose-100 border border-rose-200"
-                        : "bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border border-indigo-200"
-                    }`}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold transition-all ${step.isSystem
+                      ? "bg-rose-50 text-rose-700 hover:bg-rose-100 border border-rose-200"
+                      : "bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border border-indigo-200"
+                      }`}
                   >
                     <span className="material-symbols-outlined text-lg">
                       open_in_new
@@ -169,11 +166,10 @@ const StepDetail: React.FC<StepDetailProps> = ({ step }) => {
           <section>
             <div className="flex items-center gap-3 mb-4">
               <div
-                className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                  step.isSystem
-                    ? "bg-rose-100 text-rose-600"
-                    : "bg-indigo-100 text-indigo-600"
-                }`}
+                className={`w-8 h-8 rounded-lg flex items-center justify-center ${step.isSystem
+                  ? "bg-rose-100 text-rose-600"
+                  : "bg-indigo-100 text-indigo-600"
+                  }`}
               >
                 <span className="material-symbols-outlined text-sm">
                   output
@@ -190,9 +186,8 @@ const StepDetail: React.FC<StepDetailProps> = ({ step }) => {
                   className="flex items-start gap-3 p-3 bg-white border border-slate-100 rounded-xl shadow-sm"
                 >
                   <span
-                    className={`material-symbols-outlined text-base mt-0.5 ${
-                      step.isSystem ? "text-rose-500" : "text-indigo-500"
-                    }`}
+                    className={`material-symbols-outlined text-base mt-0.5 ${step.isSystem ? "text-rose-500" : "text-indigo-500"
+                      }`}
                   >
                     check_circle
                   </span>
@@ -207,11 +202,10 @@ const StepDetail: React.FC<StepDetailProps> = ({ step }) => {
           <section>
             <div className="flex items-center gap-3 mb-4">
               <div
-                className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                  step.isSystem
-                    ? "bg-rose-100 text-rose-600"
-                    : "bg-indigo-100 text-indigo-600"
-                }`}
+                className={`w-8 h-8 rounded-lg flex items-center justify-center ${step.isSystem
+                  ? "bg-rose-100 text-rose-600"
+                  : "bg-indigo-100 text-indigo-600"
+                  }`}
               >
                 <span className="material-symbols-outlined text-sm">
                   shield
@@ -222,11 +216,10 @@ const StepDetail: React.FC<StepDetailProps> = ({ step }) => {
               </h4>
             </div>
             <div
-              className={`p-4 rounded-xl border-l-4 font-semibold text-sm h-fit ${
-                step.isSystem
-                  ? "bg-rose-50 border-rose-500 text-rose-900"
-                  : "bg-indigo-50 border-indigo-500 text-indigo-900"
-              }`}
+              className={`p-4 rounded-xl border-l-4 font-semibold text-sm h-fit ${step.isSystem
+                ? "bg-rose-50 border-rose-500 text-rose-900"
+                : "bg-indigo-50 border-indigo-500 text-indigo-900"
+                }`}
             >
               {step.invariant}
             </div>
@@ -247,7 +240,7 @@ const StepDetail: React.FC<StepDetailProps> = ({ step }) => {
                 This step requires the repository to be converted to Markdown
                 (via <strong>Repomix</strong> or <strong>RepoLiner</strong>) and
                 re-fed.
-                <strong> All previous chat history must be deleted </strong>
+                <strong> All previous dump files in chat history must be deleted </strong>
                 in AI Studio before ingestion to prevent context window
                 overflow.
               </p>

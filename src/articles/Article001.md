@@ -1,5 +1,9 @@
+---
+title: "The Fragmentation Tax: Why AI Studio is the Warren Buffett of Vibecoding"
+date: "2025-12-23"
+index: 1
+---
 # The Fragmentation Tax: Why AI Studio is the Warren Buffett of Vibecoding
-**Dec 23, 2025**
 
 In the era of "Vibecoding," a fundamental architectural rift has emerged. It is a conflict between two opposing philosophies of machine intelligence: the monolithic, high-density efficiency of **Google AI Studio** and the high-frequency, fragmented "Agency" of **Antigravity**.
 
@@ -89,5 +93,3 @@ It is for the developer who prioritizes **Human Bandwidth**. They are willing to
 | **Efficiency Type**     | Token/Capital Conservation      | Human Focus/Agency                  |
 | **Token Cost**          | Lower (Linear / Caching)        | Higher (5–20x due to loops)         |
 | **User Pricing**        | Free for individuals            | Subscription (Estimated $20–$40/mo) |
-
-

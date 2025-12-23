@@ -21,25 +21,23 @@ const Sidebar: React.FC<SidebarProps> = ({ steps, selectedStepIndex, onSelect })
             {!isLast && (
               <div className={`absolute left-7 top-10 bottom-0 w-0.5 z-0 transition-colors duration-300 ${step.isSystem ? 'bg-rose-100' : 'bg-slate-200'}`} />
             )}
-            
+
             <button
               onClick={() => onSelect(index)}
-              className={`relative z-10 w-full flex items-start gap-4 p-4 rounded-2xl text-left transition-all duration-300 group ${
-                isActive 
-                  ? 'bg-white shadow-xl shadow-slate-200/50 ring-1 ring-slate-200 translate-x-1' 
-                  : 'hover:bg-slate-100/80 hover:translate-x-1'
-              }`}
+              className={`relative z-10 w-full flex items-start gap-4 p-4 rounded-2xl text-left transition-all duration-300 group ${isActive
+                ? 'bg-white shadow-xl shadow-slate-200/50 ring-1 ring-slate-200 translate-x-1'
+                : 'hover:bg-slate-100/80 hover:translate-x-1'
+                }`}
             >
               {/* Icon Container */}
-              <div className={`shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm border-2 transition-all duration-300 transform ${
-                isActive 
-                  ? step.isSystem 
-                    ? 'bg-rose-600 border-rose-600 text-white scale-110 shadow-rose-200' 
-                    : 'bg-indigo-600 border-indigo-600 text-white scale-110 shadow-indigo-200'
-                  : step.isSystem
-                    ? 'bg-rose-50 border-rose-200 text-rose-600 group-hover:border-rose-400'
-                    : 'bg-white border-slate-200 text-slate-500 group-hover:border-indigo-400 group-hover:text-indigo-600'
-              }`}>
+              <div className={`shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm border-2 transition-all duration-300 transform ${isActive
+                ? step.isSystem
+                  ? 'bg-rose-600 border-rose-600 text-white scale-110 shadow-rose-200'
+                  : 'bg-indigo-600 border-indigo-600 text-white scale-110 shadow-indigo-200'
+                : step.isSystem
+                  ? 'bg-rose-50 border-rose-200 text-rose-600 group-hover:border-rose-400'
+                  : 'bg-white border-slate-200 text-slate-500 group-hover:border-indigo-400 group-hover:text-indigo-600'
+                }`}>
                 <span className="material-symbols-outlined text-2xl">{step.icon}</span>
               </div>
 
