@@ -275,5 +275,5 @@ export const getWorkflowContext = (): string => {
     (i) => `- ${i.title}: ${i.description}`
   ).join("\n");
 
-  return `Vibecoding Workflow Context:\n\nSTEPS:\n${steps}\n\nSYSTEM INVARIANTS:\n${invariants}`;
+  return `Vibecoding Playbook Context:\n\nSTEPS:\n${steps}\n\nSYSTEM INVARIANTS:\n${invariants}`;
 };

@@ -1,20 +1,20 @@
-# Vibecoding Workflow Hub
+# Vibecoding Playbook
 
 ### **➡️ [Click Here to Visit the Live Interactive Website](https://davidtiberias.github.io/vibecoding-playbook/)**
 
 ---
 
-![screenshot](<assets/Screenshot 2025-12-22 at 13-46-25 Vibecoding Workflow Hub.png>)
+![screenshot](<assets/Screenshot 2025-12-22 at 13-46-25 Vibecoding Playbook.png>)
 
 ## What is This?
 
-This is an interactive website I built to document and explain the **Vibecoding Workflow** — a structured, disciplined method for building software using multiple AI tools.
+This is an interactive website I built to document and explain the **Vibecoding Playbook** — a structured, disciplined method for building software using multiple AI tools.
 
 The goal of this project is to provide a clear, visual guide that anyone can use to understand the concepts of deterministic, verification-driven AI development.
 
 ## Why Did I Build This?
 
-While working with modern AI, I noticed it's easy to get unpredictable results or have the AI lose context, leading to errors and wasted time. I developed the Vibecoding Workflow to solve this by imposing a strict process with a few key principles:
+While working with modern AI, I noticed it's easy to get unpredictable results or have the AI lose context, leading to errors and wasted time. I developed the Vibecoding Playbook to solve this by imposing a strict process with a few key principles:
 
 - **Using the Right Tool for the Job:** Assigning different AIs to specific tasks they excel at.
 - **Forcing Context Resets:** Regularly clearing the AI's memory to ensure it's always working with the most current code.

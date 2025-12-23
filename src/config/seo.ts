@@ -9,7 +9,7 @@ interface SeoConfig {
 export const seoConfig: Record<ViewType, SeoConfig> = {
     workflow: {
         title: "Workflow Map",
-        description: "Explore the step-by-step Vibecoding workflow, a verification-driven multi-AI loop designed for deterministic software development.",
+        description: "Explore the step-by-step Vibecoding Playbook, a verification-driven multi-AI loop designed for deterministic software development.",
     },
     invariants: {
         title: "System Invariants",
