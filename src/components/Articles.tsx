@@ -71,7 +71,6 @@ const Articles: React.FC = () => {
       {selectedArticle && (
         <title>{selectedArticle.title} - Vibecoding Playbook</title>
       )}
-    // Main two-column layout container
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10">
 
         {/* --- Left Column: Sidebar --- */}
