@@ -7,7 +7,7 @@ interface AnalysisTableProps {
 
 const AnalysisTable: React.FC<AnalysisTableProps> = ({ analysis }) => {
   return (
-    <div className="animate-fade-in max-w-6xl mx-auto">
+    <div className="animate-fade-in max-w-4xl mx-auto">
       <div className="text-center mb-12">
         <div className="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl shadow-indigo-200">
           <span className="material-symbols-outlined text-3xl">analytics</span>
