@@ -41,55 +41,62 @@ const App: React.FC = () => {
           <nav className="hidden md:flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
             <button
               onClick={() => setActiveView("workflow")}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${
-                activeView === "workflow"
-                  ? "bg-white text-indigo-600 shadow-sm"
-                  : "text-slate-600 hover:text-indigo-600"
-              }`}
+              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${activeView === "workflow"
+                ? "bg-white text-indigo-600 shadow-sm"
+                : "text-slate-600 hover:text-indigo-600"
+                }`}
             >
               Workflow Map
             </button>
             <button
               onClick={() => setActiveView("invariants")}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${
-                activeView === "invariants"
-                  ? "bg-white text-indigo-600 shadow-sm"
-                  : "text-slate-600 hover:text-indigo-600"
-              }`}
+              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${activeView === "invariants"
+                ? "bg-white text-indigo-600 shadow-sm"
+                : "text-slate-600 hover:text-indigo-600"
+                }`}
             >
               Invariants
             </button>
             <button
               onClick={() => setActiveView("analysis")}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${
-                activeView === "analysis"
-                  ? "bg-white text-indigo-600 shadow-sm"
-                  : "text-slate-600 hover:text-indigo-600"
-              }`}
+              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${activeView === "analysis"
+                ? "bg-white text-indigo-600 shadow-sm"
+                : "text-slate-600 hover:text-indigo-600"
+                }`}
             >
               Analysis
             </button>
             <button
               onClick={() => setActiveView("strategy")}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${
-                activeView === "strategy"
-                  ? "bg-white text-indigo-600 shadow-sm"
-                  : "text-slate-600 hover:text-indigo-600"
-              }`}
+              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${activeView === "strategy"
+                ? "bg-white text-indigo-600 shadow-sm"
+                : "text-slate-600 hover:text-indigo-600"
+                }`}
             >
               Strategy
             </button>
             <button
               onClick={() => setActiveView("articles")}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${
-                activeView === "articles"
-                  ? "bg-white text-indigo-600 shadow-sm"
-                  : "text-slate-600 hover:text-indigo-600"
-              }`}
+              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${activeView === "articles"
+                ? "bg-white text-indigo-600 shadow-sm"
+                : "text-slate-600 hover:text-indigo-600"
+                }`}
             >
               Articles
             </button>
           </nav>
+          <a
+            href="https://davidtiberias.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="md:hidden w-10 h-10 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 z-[100] group"
+            title="Visit Portfolio"
+          >
+            <span className="material-symbols-outlined text-2xl">person</span>
+            <span className="absolute right-full mr-3 px-3 py-1.5 bg-slate-800 text-white text-[10px] font-bold uppercase tracking-wider rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-xl border border-slate-700">
+              Visit David Tiberias
+            </span>
+          </a>
         </div>
       </header>
 
@@ -154,30 +161,43 @@ const App: React.FC = () => {
       <nav className="md:hidden fixed bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md border border-slate-200 p-2 rounded-2xl shadow-2xl flex items-center justify-around z-50">
         <button
           onClick={() => setActiveView("workflow")}
-          className={`flex flex-col items-center gap-1 ${
-            activeView === "workflow" ? "text-indigo-600" : "text-slate-400"
-          }`}
+          className={`flex flex-col items-center gap-1 ${activeView === "workflow" ? "text-indigo-600" : "text-slate-400"
+            }`}
         >
           <span className="material-symbols-outlined">account_tree</span>
           <span className="text-[10px] font-bold uppercase">Workflow</span>
         </button>
         <button
           onClick={() => setActiveView("invariants")}
-          className={`flex flex-col items-center gap-1 ${
-            activeView === "invariants" ? "text-indigo-600" : "text-slate-400"
-          }`}
+          className={`flex flex-col items-center gap-1 ${activeView === "invariants" ? "text-indigo-600" : "text-slate-400"
+            }`}
         >
           <span className="material-symbols-outlined">shield</span>
           <span className="text-[10px] font-bold uppercase">Invariants</span>
         </button>
         <button
           onClick={() => setActiveView("analysis")}
-          className={`flex flex-col items-center gap-1 ${
-            activeView === "analysis" ? "text-indigo-600" : "text-slate-400"
-          }`}
+          className={`flex flex-col items-center gap-1 ${activeView === "analysis" ? "text-indigo-600" : "text-slate-400"
+            }`}
         >
           <span className="material-symbols-outlined">analytics</span>
           <span className="text-[10px] font-bold uppercase">Analysis</span>
+        </button>
+        <button
+          onClick={() => setActiveView("strategy")}
+          className={`flex flex-col items-center gap-1 ${activeView === "strategy" ? "text-indigo-600" : "text-slate-400"
+            }`}
+        >
+          <span className="material-symbols-outlined">strategy</span>
+          <span className="text-[10px] font-bold uppercase">Strategy</span>
+        </button>
+        <button
+          onClick={() => setActiveView("articles")}
+          className={`flex flex-col items-center gap-1 ${activeView === "articles" ? "text-indigo-600" : "text-slate-400"
+            }`}
+        >
+          <span className="material-symbols-outlined">article</span>
+          <span className="text-[10px] font-bold uppercase">Articles</span>
         </button>
       </nav>
 
@@ -195,7 +215,7 @@ const App: React.FC = () => {
         href="https://davidtiberias.github.io"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 w-14 h-14 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 z-[100] group"
+        className="hidden md:flex fixed bottom-6 right-6 w-14 h-14 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 z-[100] group"
         title="Visit Portfolio"
       >
         <span className="material-symbols-outlined text-2xl">person</span>
