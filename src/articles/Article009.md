@@ -1,14 +1,10 @@
 ---
 title: "Iteration Over Perfection: How I Shape AI Into My Voice"
 date: "2025-12-24"
-index: 8
+index: 9
 ---
-
-# Iteration Over Perfection: How I Shape AI Into My Voice
 
 **_I didn’t stop at ten. I stopped at nine._**
-
----
 
 That wasn’t a mistake or a sign of an unfinished project. It was a choice. In a workflow dedicated to process over perfection, sometimes the most honest thing you can do is admit you need to pause. This project has always been a living experiment, and this pause is a part of that story.
 

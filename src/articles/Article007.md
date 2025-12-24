@@ -4,10 +4,6 @@ date: "2025-12-24"
 index: 7
 ---
 
-# Mapping the Vibecoding Playbook: A Deep Dive into the Workflow Map, Invariants, Tools, and Real-World Practice
-
----
-
 ## Introduction: Why The Workflow Matters
 
 If you’ve ever tried to build an app with AI coding tools - Claude Code, Cursor, Codex, or any of the new breed - you know the thrill of seeing your ideas come to life in minutes. But you also know the frustration: code that “mostly works” but is hard to maintain, security holes you didn’t expect, and a repo that feels more like a black box than a living project. That’s where The Workflow comes in.

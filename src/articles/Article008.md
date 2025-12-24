@@ -4,11 +4,7 @@ date: "2025-12-24"
 index: 8
 ---
 
-# Getting Started with the Vibecoding Workflow
-
 **_A beginner’s guide to building with AI, step by step_**
-
----
 
 So, you’re ready to build something with AI but want to avoid the chaos of random prompting. **You're in the right place**. The Vibecoding Workflow isn't a magic button; it's a structured map, a repeatable process designed to turn your ideas into a real, functional product with clarity and control.
 

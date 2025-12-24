@@ -1,12 +1,15 @@
 // renderer/PageShell.tsx
 import React from 'react'
 import type { PageContext } from 'vike/types'
+// CHANGE: Import from your local file
+import { PageContextProvider } from './usePageContext' 
 
-
-export function PageShell({ children }: { children: React.ReactNode; pageContext: PageContext }) {
+export function PageShell({ children, pageContext }: { children: React.ReactNode; pageContext: PageContext }) {
   return (
     <React.StrictMode>
-      {children}
+      <PageContextProvider pageContext={pageContext}>
+        {children}
+      </PageContextProvider>
     </React.StrictMode>
   )
 }

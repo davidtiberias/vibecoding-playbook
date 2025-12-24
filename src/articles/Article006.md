@@ -4,10 +4,6 @@ date: "2025-12-23"
 index: 6
 ---
 
-# Why I Built the Vibecoding Playbook (Even Though I’m an Architect, Not a Coder)
-
----
-
 Let me be perfectly clear from the start: I’m not a system architect, a software architect, or any of the other prestigious engineering hats you find in the tech world. I am, by trade and training, an architect - the kind who designs physical buildings, coordinates contractors, and spends hours poring over construction drawings. My world is one of scale, materials, human use, and the unforgiving laws of physics. Code, for the most part, has been a foreign language.
 
 But curiosity is a powerful force. I had developed a disciplined, step-by-step process for working with AI - a workflow - and I was obsessed with a single question: could it hold up under the pressure of a real project? A theoretical process is just an idea. To prove its worth, I had to build something tangible. So I set out to create this very website, the Vibecoding Playbook. My mission was twofold: first, to document the workflow for others, and second, more critically, to prove its validity by using it to construct the very platform that describes it.

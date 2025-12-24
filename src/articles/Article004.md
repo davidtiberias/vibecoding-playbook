@@ -4,10 +4,6 @@ date: "2025-12-23"
 index: 4
 ---
 
-# RepoLiner: The Brutalist Grade Code Consolidator
-
----
-
 Walk into any developer’s project folder and you’ll often find chaos: stray scripts, forgotten configs, and a directory tree that looks more like a crime scene than a codebase. It takes a certain kind of genius to create such entropy, but it takes an even sharper tool to tame it. That’s where **[RepoLiner](https://davidtiberias.github.io/RepoLiner/)** steps in - the adult in the room, the vacuum cleaner for your scattered files.
 
 [RepoLiner](https://davidtiberias.github.io/RepoLiner/)’s mission is simple: consolidate. At its core, it’s a recursive scanner that traverses your directories, scoops up every relevant file, and flattens them into a single Markdown document. Think of it as turning a messy Lego explosion into a neatly catalogued instruction manual. For large language models, auditors, or even your future self, this linear stream of code is far easier to digest than a labyrinth of folders.

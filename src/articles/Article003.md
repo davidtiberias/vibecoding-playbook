@@ -4,10 +4,6 @@ date: "2025-12-23"
 index: 3
 ---
 
-# The 2025 Paradigm Shift in Software Engineering: An Analysis of Vibe Coding and Agentic Orchestration
-
----
-
 The year 2025 represents a definitive transition in the discipline of software engineering, moving from the traditional imperative model of programming to an intent-based architecture defined by **vibe coding** and agentic systems. Statistical evidence from the _Stack Overflow 2025 Developer Survey_ indicates that 84% of professional developers have integrated AI-driven development tools into their daily workflows, a substantial increase from 76% in 2024. This surge in adoption signifies that artificial intelligence is no longer an optional augmentation but is rapidly becoming the standard operational layer for the creation and maintenance of digital systems.
 
 The emergence of **vibe coding**, a term coined by Andrej Karpathy in February 2025, describes a methodology where the human developer provides high-level text or voice commands - the _"vibe"_ - while delegating implementation, debugging, and verification to autonomous agents.

@@ -4,10 +4,6 @@ date: "2025-12-23"
 index: 5
 ---
 
-# Why We Flatten the Repo: Feeding the Beast
-
----
-
 Every developer knows the pain of context. Your repo is a sprawling city: source files tucked into alleys, configs hidden in basements, and scripts scattered like flyers on a busy street. For humans, this is manageable - we navigate folders, open tabs, and piece together the story. For large language models, though, this chaos is kryptonite.
 
 That’s why we flatten. We take the entire repo, compress its sprawl into one linear document, and feed it to the LLM. It’s not just a hack; it’s a survival strategy.

@@ -19,7 +19,7 @@ const Sidebar: React.FC<SidebarProps> = ({ steps, selectedStepIndex, onSelect })
           <div key={`${step.id}-${index}`} className="relative">
             {/* Connector Line */}
             {!isLast && (
-              <div className={`absolute left-7 top-10 bottom-0 w-0.5 z-0 transition-colors duration-300 ${step.isSystem ? 'bg-rose-100' : 'bg-slate-200'}`} />
+              <div className={`absolute left-10 top-12 -bottom-12   w-0.5 z-0 transition-colors duration-300 ${step.isSystem ? 'bg-rose-100' : 'bg-slate-200'}`} />
             )}
 
             <button
@@ -30,7 +30,7 @@ const Sidebar: React.FC<SidebarProps> = ({ steps, selectedStepIndex, onSelect })
                 }`}
             >
               {/* Icon Container */}
-              <div className={`shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm border-2 transition-all duration-300 transform ${isActive
+              <div className={`shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm border-2 transition-all duration-300 transform ${isActive
                 ? step.isSystem
                   ? 'bg-rose-600 border-rose-600 text-white scale-110 shadow-rose-200'
                   : 'bg-indigo-600 border-indigo-600 text-white scale-110 shadow-indigo-200'

@@ -4,10 +4,6 @@ date: "2025-12-23"
 index: 1
 ---
 
-# The Fragmentation Tax: Why AI Studio is the Warren Buffett of Vibecoding
-
----
-
 In the era of "Vibecoding," a fundamental architectural rift has emerged. It is a conflict between two opposing philosophies of machine intelligence: the monolithic, high-density efficiency of **Google AI Studio** and the high-frequency, fragmented "Agency" of **Antigravity**.
 
 To the casual observer, both platforms appear to perform the same magic - converting intent into executable code. However, a structural audit reveals that one functions like the compound interest of a long-term value investor, while the other operates like a series of high-interest payday loans. This is the definitive breakdown of the **Fragmentation Tax**.

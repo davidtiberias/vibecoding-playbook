@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+// pages/index/+Page.tsx
+import React, { useState, useEffect } from "react";
 import { WORKFLOW_STEPS, SYSTEM_INVARIANTS, TOOL_ANALYSIS } from "../../src/constants";
 import { ViewType } from "../../src/types";
-// src/App.tsx (after)
 import {
   AnalysisTable,
   Articles,
@@ -17,15 +17,26 @@ const App: React.FC = () => {
   const [selectedStepIndex, setSelectedStepIndex] = useState<number | null>(
     null
   );
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
   const handleStepSelect = (index: number) => {
     setActiveView("workflow");
     setSelectedStepIndex(index);
   };
 
+  // Handle scroll for Back to Top button (Global)
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 400);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col">
-      <SeoManager activeView={activeView} /> {/* Use the manager here */}
+    <div className="min-h-screen bg-slate-50 flex flex-col relative">
+      <SeoManager activeView={activeView} />
+      
       {/* Header */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -98,9 +109,6 @@ const App: React.FC = () => {
             title="Visit Portfolio"
           >
             <span className="material-symbols-outlined text-2xl">person</span>
-            <span className="absolute right-full mr-3 px-3 py-1.5 bg-slate-800 text-white text-[10px] font-bold uppercase tracking-wider rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-xl border border-slate-700">
-              Visit David Tiberias
-            </span>
           </a>
         </div>
       </header>
@@ -110,7 +118,7 @@ const App: React.FC = () => {
         {activeView === "workflow" && (
           <>
             {/* Left Column: List */}
-            <div className="w-full lg:w-1/3">
+            <div className="animate-fade-in w-full lg:w-1/3">
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-slate-900">Workflow</h2>
                 <p className="text-slate-500 mt-2 text-sm leading-relaxed">
@@ -127,7 +135,7 @@ const App: React.FC = () => {
             </div>
 
             {/* Right Column: Details */}
-            <div className="w-full lg:w-2/3">
+            <div className="animate-fade-in w-full lg:w-2/3">
               <StepDetail
                 step={
                   selectedStepIndex !== null
@@ -207,15 +215,30 @@ const App: React.FC = () => {
       </nav>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-slate-200 mt-12 bg-white">
+      <footer className="py-3 border-t border-slate-200 mt-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
+
           <p className="text-slate-400 text-xs font-medium tracking-wider uppercase">
-            © 2025 DAVIDTIBERIAS
+            Built 99.99% with LLMs. My part? Vibe check.
+          </p>
+          <p className="text-slate-400 text-xs font-light tracking-wider uppercase">
+            © 2025 DAVIDTIBERIAS. All rights reserved.
           </p>
         </div>
       </footer>
 
-      {/* Portfolio Link - Adjusted position to right-24 to avoid overlap with Chat FAB */}
+      {/* Floating Back to Top Button (Global) */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className={`hidden sm:flex fixed bottom-24 right-6 w-14 h-14 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 z-[100] group ${
+          showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+        }`}
+        title="Back to Top"
+      >
+        <span className="material-symbols-outlined text-xl">arrow_upward</span>
+      </button>
+
+      {/* Portfolio Link */}
       <a
         href="https://davidtiberias.github.io"
         target="_blank"
