@@ -8,21 +8,21 @@ index: 7
 
 ---
 
-## Introduction: Why the Vibecoding Playbook Map Matters
+## Introduction: Why The Workflow Matters
 
-If you’ve ever tried to build an app with AI coding tools—Claude Code, Cursor, Codex, or any of the new breed—you know the thrill of seeing your ideas come to life in minutes. But you also know the frustration: code that “mostly works” but is hard to maintain, security holes you didn’t expect, and a repo that feels more like a black box than a living project. That’s where the Vibecoding Playbook Map comes in.
+If you’ve ever tried to build an app with AI coding tools - Claude Code, Cursor, Codex, or any of the new breed - you know the thrill of seeing your ideas come to life in minutes. But you also know the frustration: code that “mostly works” but is hard to maintain, security holes you didn’t expect, and a repo that feels more like a black box than a living project. That’s where The Workflow comes in.
 
-I’ve spent the last year living inside this system—building, refining, and sometimes breaking things with AI. The Workflow Map isn’t just a diagram or a checklist. It’s the backbone of responsible, repeatable, and scalable AI-assisted development. It’s how you move from “throwaway weekend project” to production-grade software that you can trust, understand, and evolve.
+I’ve spent the last year living inside this system - building, refining, and sometimes breaking things with AI. The Workflow Map isn’t just a diagram or a checklist. It’s the backbone of responsible, repeatable, and scalable AI-assisted development. It’s how you move from “throwaway weekend project” to production-grade software that you can trust, understand, and evolve.
 
 In this article, I’ll walk you through every step of the Workflow Map, explain the philosophy behind it, and share practical insights from real projects. Whether you’re a solo dev, a team lead, or just curious about the future of coding, you’ll find actionable ideas and honest reflections here.
 
 ---
 
-## The Vibecoding Playbook Map: Step-by-Step Breakdown
+## The Workflow: Step-by-Step Breakdown
 
 ### The Four Core Stages
 
-The Vibecoding Playbook Map is built around four key stages, each designed to address a specific challenge in AI-assisted development:
+The Workflow is built around four key stages, each designed to address a specific challenge in AI-assisted development:
 
 1. **Vibe Formalization**: Capture and refine your intuitive requirements into a structured, high-level representation.
 2. **Constrained Generation**: Synthesize code from the formalized vibe, guided by architectural principles and maintainability heuristics.
@@ -56,7 +56,7 @@ Before I start any new feature, I review and update the Instructions Folder. For
 ### Stage 2: Constrained Generation
 
 **Purpose:**  
-Now the AI gets to work. But instead of “do whatever you want,” it’s guided by explicit constraints—architecture, style, security, and maintainability.
+Now the AI gets to work. But instead of “do whatever you want,” it’s guided by explicit constraints - architecture, style, security, and maintainability.
 
 **Tools Used:**
 
@@ -131,10 +131,10 @@ Each stage builds on the previous, enforcing invariants that keep the system rob
 
 ### Why Does This Workflow Exist?
 
-The Vibecoding Playbook Map isn’t just a fancy diagram—it’s a response to real pain points in AI-assisted development:
+The Workflow isn’t just a fancy diagram - it’s a response to real pain points in AI-assisted development:
 
 - **Ambiguity and Drift**: Without explicit constraints, AI tools invent patterns, mix paradigms, and create code that’s hard to maintain.
-- **Loss of Rationale**: AI-generated code often lacks the “why”—the reasoning behind design choices, making future changes risky.
+- **Loss of Rationale**: AI-generated code often lacks the “why” - the reasoning behind design choices, making future changes risky.
 - **Security and Compliance Risks**: Unchecked AI output can introduce vulnerabilities, violate policies, and create technical debt.
 - **Knowledge Silos**: When context isn’t preserved, onboarding new team members becomes a nightmare.
 
@@ -154,7 +154,7 @@ Case studies from Booking.com, Adidas, and individual developers show that teams
 - 40–50% reduction in security vulnerabilities
 - 62% faster onboarding for new developers
 
-The workflow isn’t just theory—it’s a proven system for building better software, faster, with AI.
+The workflow isn’t just theory - it’s a proven system for building better software, faster, with AI.
 
 ---
 
@@ -212,7 +212,7 @@ Invariants are the unchanging truths that must hold for your system to be correc
 | Level 2 | Standard production        | Full V.E.R.I.F.Y., unit tests, security scan          |
 | Level 3 | High-risk (auth, payments) | Deep V.E.R.I.F.Y., comprehensive tests, formal review |
 
-By integrating these enforcement mechanisms into every stage of the workflow, invariants become living parts of the system—not just theoretical ideals.
+By integrating these enforcement mechanisms into every stage of the workflow, invariants become living parts of the system - not just theoretical ideals.
 
 ---
 
@@ -220,7 +220,7 @@ By integrating these enforcement mechanisms into every stage of the workflow, in
 
 ### The Big Three: Claude Code, Codex, and Cursor
 
-Let’s get practical. The Vibecoding Playbook Map isn’t tied to a single tool—it’s designed to work with the best of breed. Here’s how the main players stack up.
+Let’s get practical. The Workflow isn’t tied to a single tool - it’s designed to work with the best of breed. Here’s how the main players stack up.
 
 #### Claude Code
 
@@ -363,7 +363,7 @@ Every loop is an opportunity to improve the workflow, update invariants, and enh
 
 ### Verification Levels and Security
 
-Security isn’t an afterthought—it’s baked into every stage. The workflow defines verification levels based on component risk:
+Security isn’t an afterthought - it’s baked into every stage. The workflow defines verification levels based on component risk:
 
 - **Critical (auth, payments, PII)**: Level 3 verification, security specialist review, comprehensive documentation
 - **High (data processing, integrations)**: Level 2 verification, security scanning, peer review
@@ -496,7 +496,7 @@ The key is to treat QA as a continuous conversation, not a final exam. Every rev
 
 ## Conclusion: The Philosophy and Mechanics of Vibecoding
 
-The Vibecoding Playbook Map is more than a process—it’s a philosophy. It’s about moving from intuition to implementation, from “just vibes” to robust, maintainable software. By formalizing context, constraining generation, enforcing invariants, and integrating human review, you build systems that are not just fast, but trustworthy and scalable.
+The Workflow is more than a process - it’s a philosophy. It’s about moving from intuition to implementation, from “just vibes” to robust, maintainable software. By formalizing context, constraining generation, enforcing invariants, and integrating human review, you build systems that are not just fast, but trustworthy and scalable.
 
 In practice, this means:
 
@@ -506,10 +506,10 @@ In practice, this means:
 - The workflow adapts to your tools, team, and project needs
 - Continuous improvement is built into every loop
 
-Whether you’re building a weekend prototype or an enterprise-grade app, the Vibecoding Playbook Map gives you the structure, discipline, and flexibility to succeed. It’s not about replacing developers—it’s about empowering them to create, collaborate, and innovate with AI.
+Whether you’re building a weekend prototype or an enterprise-grade app, The Workflow gives you the structure, discipline, and flexibility to succeed. It’s not about replacing developers - it’s about empowering them to create, collaborate, and innovate with AI.
 
 So next time you fire up Claude Code, Cursor, or Codex, remember: the vibes are just the beginning. The workflow is what turns them into reality.
 
 ---
 
-**Ready to build with vibes? Start with context, enforce your invariants, and let the workflow guide you to software that lasts. The code will take care of itself—but only if you take care of the process.**
+**Ready to build with vibes? Start with context, enforce your invariants, and let the workflow guide you to software that lasts. The code will take care of itself - but only if you take care of the process.**

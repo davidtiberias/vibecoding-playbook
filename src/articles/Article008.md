@@ -8,6 +8,8 @@ index: 8
 
 **_A beginner’s guide to building with AI, step by step_**
 
+---
+
 So, you’re ready to build something with AI but want to avoid the chaos of random prompting. **You're in the right place**. The Vibecoding Workflow isn't a magic button; it's a structured map, a repeatable process designed to turn your ideas into a real, functional product with clarity and control.
 
 Think of it as a detailed architectural blueprint for a digital construction project. Whether you're an actual architect with zero coding experience or a seasoned developer looking for a more disciplined way to orchestrate AI, this manual is for you. We will walk through every step, explain every rule, and give you the exact prompts and settings you need to get started.
@@ -39,7 +41,7 @@ This workflow is a loop, but we'll walk through it linearly first. Each step has
 
 that keep the project on track.
 
-### **Step 01 — Brainstorming & Debate: Unleashing Creative Chaos**
+### **Step 01 - Brainstorming & Debate: Unleashing Creative Chaos**
 
 - **Purpose:** To generate a wide, unfiltered cloud of raw ideas. This is the only phase where creative chaos is encouraged. You're exploring the entire problem space without worrying about feasibility or structure.
 
@@ -64,7 +66,7 @@ that keep the project on track.
 
 - **What Success Looks Like:** A long, messy list of 10-20+ potential ideas. You should have more concepts than you need, a healthy mix of practical and ambitious. You are done when you can pick 2-3 strong core ideas to move forward with.
 
-### **Step 02 — Translation to LLM: Forging Clarity from Chaos**
+### **Step 02 - Translation to LLM: Forging Clarity from Chaos**
 
 - **Purpose:** To take the best raw ideas from the brainstorm and translate them into clear, structured, and unambiguous instructions that a machine can understand. This is the most critical step for ensuring quality downstream.
 
@@ -98,9 +100,9 @@ that keep the project on track.
 
 - **What Success Looks Like:** A document so clear that a junior developer could read it and know exactly what to build. There should be no room for interpretation.
 
-### **Step 03 — Feature Roadmap: Drafting the Official Blueprint**
+### **Step 03 - Feature Roadmap: Drafting the Official Blueprint**
 
-- **Purpose:** To expand the structured prompts from the previous step into foundational project documents. This creates the "seed" of your repository—the first tangible artifacts that define the project's scope.
+- **Purpose:** To expand the structured prompts from the previous step into foundational project documents. This creates the "seed" of your repository - the first tangible artifacts that define the project's scope.
 
 - **System Instructions:** The outputs here are still considered _drafts_, but they are the first official documents. You're creating the initial project brief and construction schedule.
 
@@ -126,15 +128,15 @@ that keep the project on track.
 
 - **What Success Looks Like:** A folder containing your three initial Markdown files. Your repository now has a documented purpose and a plan.
 
-### **Step 03.5 — Repo Dump (The Context Reset): Creating the Master Blueprint**
+### **Step 03.5 - Repo Dump (The Context Reset): Creating the Master Blueprint**
 
-- **Purpose:** To flatten the entire project repository—all relevant files—into a single Markdown document. This snapshot becomes the single source of truth for the AI, eliminating context drift and ensuring it sees the latest state of the project.
+- **Purpose:** To flatten the entire project repository - all relevant files - into a single Markdown document. This snapshot becomes the single source of truth for the AI, eliminating context drift and ensuring it sees the latest state of the project.
 
 - **System Instructions:** This is a technical step that must be performed without fail before any planning or debugging. It is the cornerstone of the workflow's reliability.
 
 - **Settings & Tool:**
 
-  - **Tool:** RepoLiner (a simple script) or Repomix (for advanced features).
+  - **Tool:** [RepoLiner](https://davidtiberias.github.io/RepoLiner/) (a simple script) or Repomix (for advanced features).
   - **Whitelist:** A list of file extensions to include (e.g., `.md`, `.tsx`, `.ts`, `.css`, `.json`).
   - **Exclude:** A list of folders and files to ignore (e.g., `.git`, `node_modules`, `dist`, secrets).
   - **Rule:** Uphold the **Repo Dump Invariant**. Never start a planning session without a fresh dump.
@@ -142,8 +144,8 @@ that keep the project on track.
 - **Example Action:**
 
   ```bash
-  # If using a command-line tool like RepoLiner
-  repoliner --whitelist "md,tsx,ts,css,json" --output repo_dump.md
+  REM If using a command-line tool like Repoliner
+  call "C:\Project\RepoLiner\launch.bat" "C:\Project\vibecoding-playbook"
   ```
 
 - **Common Pitfalls:**
@@ -153,7 +155,7 @@ that keep the project on track.
 
 - **What Success Looks Like:** A single, large Markdown file (`repo_dump.md`) that contains the full contents of every important file in your project, clearly delineated.
 
-### **Step 04 — Task Generation: The Deterministic Plan**
+### **Step 04 - Task Generation: The Deterministic Plan**
 
 - **Purpose:** To convert the high-level roadmap from the repo dump into a list of explicit, atomic, and reproducible engineering tasks. This is where strategy becomes an actionable checklist.
 
@@ -179,7 +181,7 @@ that keep the project on track.
 
 - **What Success Looks Like:** A structured list of tasks (e.g., in JSON or a Markdown table) that are small, clear, and can be executed independently.
 
-### **Step 05 — Agent Execution: The Construction Crew**
+### **Step 05 - Agent Execution: The Construction Crew**
 
 - **Purpose:** To carry out the tasks generated in the previous step, writing code and modifying files. This is the "hands" phase of the workflow.
 
@@ -199,7 +201,7 @@ that keep the project on track.
 
 - **What Success Looks Like:** Your codebase has changed according to the task list. New files exist, old files are modified, and you have a terminal log detailing every command that was run.
 
-### **Step 06 & 06.5 — Debugging & Refresh: Inspection and Correction**
+### **Step 06 & 06.5 - Debugging & Refresh: Inspection and Correction**
 
 - **Purpose:** To identify errors, validate fixes, and update the master blueprint with the corrected state of the repository.
 
@@ -207,9 +209,9 @@ that keep the project on track.
 
 - **Settings & Tool:**
 
-  - **Tool:** Search AI Mode for diagnosis, RepoLiner for refreshing.
+  - **Tool:** Google Search AI Mode for diagnosis, [RepoLiner](https://davidtiberias.github.io/RepoLiner/) for refreshing.
   - **Input:** The latest repo dump _plus_ the raw error logs from the terminal.
-  - **Rule:** After any fix is applied, you _must_ create a new repo dump before proceeding. This is the **Token Stability Invariant** in action—clearing old context before adding new.
+  - **Rule:** After any fix is applied, you _must_ create a new repo dump before proceeding. This is the **Token Stability Invariant** in action - clearing old context before adding new.
 
 - **Example Prompt (for Search AI):**
 
@@ -228,7 +230,7 @@ that keep the project on track.
 
 - **What Success Looks Like:** The bug is fixed, your application builds successfully, and you have a new, clean `repo_dump.md` reflecting the corrected state.
 
-### **Step 07 — Solution Feedback Loop: Learning from the Process**
+### **Step 07 - Solution Feedback Loop: Learning from the Process**
 
 - **Purpose:** To feed verified solutions and successful patterns back into the workflow, making the entire system smarter and more efficient over time.
 
@@ -277,9 +279,9 @@ Think of these tools as a team of specialists. Knowing their strengths and weakn
 - **Microsoft Copilot:** The logical pragmatist. Excellent at turning fuzzy concepts into structured specs. Needs clear input to shine.
 - **ChatGPT:** The master documentarian. Superb at drafting well-written roadmaps and READMEs. Can sometimes be too verbose.
 - **Google AI Studio:** The strict project manager. Uncreative but utterly reliable for deterministic planning when configured correctly.
-- **RepoLiner / Repomix:** The diligent archivists. Their sole job is to create a perfect, faithful record of the project state.
+- **[RepoLiner](https://davidtiberias.github.io/RepoLiner/) / Repomix:** The diligent archivists. Their sole job is to create a perfect, faithful record of the project state.
 - **Antigravity:** The powerful but silent workforce. It gets the job done efficiently but needs explicit instructions and monitoring.
-- **Search AI Mode:** The sharp-eyed inspector. The best tool for diagnosing problems when given the right evidence (logs and a repo dump).
+- **Google Search AI Mode:** The sharp-eyed inspector. The best tool for diagnosing problems when given the right evidence (logs and a repo dump).
 
 ---
 
@@ -294,14 +296,14 @@ Think of these tools as a team of specialists. Knowing their strengths and weakn
 
 ### **Notes for Advanced Users**
 
-- **Customize Your RepoLiner:** Script more advanced logic for your repo dumps, like automatically removing comments or test files to save tokens.
+- **Customize Your [RepoLiner](https://davidtiberias.github.io/RepoLiner/):** Script more advanced logic for your repo dumps, like automatically removing comments or test files to save tokens.
 - **Use Different Models for Different Tasks:** You might find that one model is better at scaffolding React components while another excels at writing Python scripts. Swap models within the workflow as needed.
-- **Automate the Loop:** For true power users, script the connections between the steps. For example, have a script that automatically runs RepoLiner and then calls the AI Studio API with the output to generate the next task list.
+- **Automate the Loop:** For true power users, script the connections between the steps. For example, have a script that automatically runs [RepoLiner](https://davidtiberias.github.io/RepoLiner/) and then calls the AI Studio API with the output to generate the next task list.
 
 ---
 
 ## Closing Thoughts: This Site is the Proof
 
-The Vibecoding Workflow isn’t just a diagram on a page—it’s a living method you can follow, and this very website stands as a testament to its effectiveness. It began as three simple Markdown files and grew, cycle by cycle, into this interactive Hub.
+The Vibecoding Workflow isn’t just a diagram on a page - it’s a living method you can follow, and this very website stands as a testament to its effectiveness. It began as three simple Markdown files and grew, cycle by cycle, into this interactive Hub.
 
 The process demands discipline, but it rewards you with clarity and control. Now, it’s your turn. Start with a brainstorm, create your first blueprint, and let the loop guide you. See what you can build.

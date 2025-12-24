@@ -14,7 +14,7 @@ const SeoManager: React.FC<SeoManagerProps> = ({ activeView }) => {
     // React will automatically move them to the document <head>.
     return (
         <>
-            <title>{meta.title} - Vibecoding Playbook</title>
+<title>{`${meta.title} - Vibecoding Playbook`}</title>
             <meta name="description" content={meta.description} />
             <link rel="canonical" href="https://davidtiberias.github.io/vibecoding-playbook/" />
         </>

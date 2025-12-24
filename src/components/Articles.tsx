@@ -25,7 +25,7 @@ const Articles: React.FC = () => {
   // Use useMemo to parse articles only once, preventing Buffer errors.
   const articles = useMemo((): Article[] => {
     return Object.entries(articleModules).map(([path, rawContent]) => {
-      const { data, content } = matter(rawContent);
+      const { data, content } = matter(rawContent as string);
       const match = path.match(/Article(\d+)\.md$/);
       const id = match ? match[1] : path;
       return {
@@ -69,7 +69,7 @@ const Articles: React.FC = () => {
   return (
     <> {/* Wrap in a fragment */}
       {selectedArticle && (
-        <title>{selectedArticle.title} - Vibecoding Playbook</title>
+        <title>{`${selectedArticle.title} - Vibecoding Playbook`}</title>
       )}
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10">
 

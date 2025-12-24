@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { WORKFLOW_STEPS, SYSTEM_INVARIANTS, TOOL_ANALYSIS } from "./constants";
-import { ViewType } from "./types";
+import { WORKFLOW_STEPS, SYSTEM_INVARIANTS, TOOL_ANALYSIS } from "../../src/constants";
+import { ViewType } from "../../src/types";
 // src/App.tsx (after)
 import {
   AnalysisTable,
@@ -10,7 +10,7 @@ import {
   StepDetail,
   Strategy,
   SeoManager,
-} from "./components";
+} from "../../src/components";
 
 const App: React.FC = () => {
   const [activeView, setActiveView] = useState<ViewType>("workflow");

@@ -8,7 +8,7 @@
 
 ## What is This?
 
-This is an interactive website I built to document and explain the **Vibecoding Playbook** — a structured, disciplined method for building software using multiple AI tools.
+This is an interactive website I built to document and explain the **Vibecoding Playbook** - a structured, disciplined method for building software using multiple AI tools.
 
 The goal of this project is to provide a clear, visual guide that anyone can use to understand the concepts of deterministic, verification-driven AI development.
 

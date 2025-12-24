@@ -6,17 +6,19 @@ index: 6
 
 # Why I Built the Vibecoding Playbook (Even Though I’m an Architect, Not a Coder)
 
-Let me be perfectly clear from the start: I’m not a system architect, a software architect, or any of the other prestigious engineering hats you find in the tech world. I am, by trade and training, an architect—the kind who designs physical buildings, coordinates contractors, and spends hours poring over construction drawings. My world is one of scale, materials, human use, and the unforgiving laws of physics. Code, for the most part, has been a foreign language.
+---
 
-But curiosity is a powerful force. I had developed a disciplined, step-by-step process for working with AI—a workflow—and I was obsessed with a single question: could it hold up under the pressure of a real project? A theoretical process is just an idea. To prove its worth, I had to build something tangible. So I set out to create this very website, the Vibecoding Playbook. My mission was twofold: first, to document the workflow for others, and second, more critically, to prove its validity by using it to construct the very platform that describes it.
+Let me be perfectly clear from the start: I’m not a system architect, a software architect, or any of the other prestigious engineering hats you find in the tech world. I am, by trade and training, an architect - the kind who designs physical buildings, coordinates contractors, and spends hours poring over construction drawings. My world is one of scale, materials, human use, and the unforgiving laws of physics. Code, for the most part, has been a foreign language.
 
-This is the complete, exhaustive story of that experiment: a deep dive into how a non-coder used a blueprint-driven process to orchestrate a team of AI agents, why a crucial tool called RepoLiner was born from a mix of necessity and productive laziness, and the profound lessons I learned in bridging the gap between building physical structures and digital ones.
+But curiosity is a powerful force. I had developed a disciplined, step-by-step process for working with AI - a workflow - and I was obsessed with a single question: could it hold up under the pressure of a real project? A theoretical process is just an idea. To prove its worth, I had to build something tangible. So I set out to create this very website, the Vibecoding Playbook. My mission was twofold: first, to document the workflow for others, and second, more critically, to prove its validity by using it to construct the very platform that describes it.
+
+This is the complete, exhaustive story of that experiment: a deep dive into how a non-coder used a blueprint-driven process to orchestrate a team of AI agents, why a crucial tool called [RepoLiner](https://davidtiberias.github.io/RepoLiner/) was born from a mix of necessity and productive laziness, and the profound lessons I learned in bridging the gap between building physical structures and digital ones.
 
 ---
 
 ## The Spark: Why I Needed a Building, Not Just a Set of Blueprints
 
-In my profession, a blueprint is not the building. It’s an essential, non-negotiable set of instructions, but it isn’t the thing itself. When I first formalized the Vibecoding Playbook, it lived in a series of Markdown files—the digital equivalent of a rolled-up set of drawings. This felt incomplete, static. Documentation alone couldn’t convey the dynamic, iterative nature of the process.
+In my profession, a blueprint is not the building. It’s an essential, non-negotiable set of instructions, but it isn’t the thing itself. When I first formalized the Vibecoding Playbook, it lived in a series of Markdown files - the digital equivalent of a rolled-up set of drawings. This felt incomplete, static. Documentation alone couldn’t convey the dynamic, iterative nature of the process.
 
 I realized I needed a living model, a demonstration project that could:
 
@@ -26,7 +28,7 @@ I realized I needed a living model, a demonstration project that could:
 
 The goal crystallized: build a website that was both the instruction manual and the finished structure. It was then that I hit my first major, intensely practical roadblock. Manually feeding context to different AI tools is a nightmare. I was constantly copying and pasting dozens of files, explaining folder structures, and correcting the AI’s fragmented understanding of the project. It felt like running between a plumber, an electrician, and a carpenter on a job site, giving each of them slightly different verbal instructions and hoping the building doesn’t collapse. It was inefficient and dangerously prone to error.
 
-Out of that frustration, **RepoLiner** was conceived. I needed a "master blueprint"—a single, canonical document that every AI "contractor" could refer to. With the help of **Google AI Studio** (this was before Antigravity existed), I designed it. I described my problem in plain English and asked the AI to help me build a lightweight script that would recursively scan a project folder, cherry-pick the important files, and flatten everything into one comprehensive Markdown file. RepoLiner was my solution, born from the simple need to create a single source of truth. It wasn't designed to be fancy—for heavy-duty production work with token counting and secret detection, a tool like Repomix is a better fit—but for this project, it was the perfect, pragmatic tool.
+Out of that frustration, **[RepoLiner](https://davidtiberias.github.io/RepoLiner/)** was conceived. I needed a "master blueprint" - a single, canonical document that every AI "contractor" could refer to. With the help of **Google AI Studio** (this was before Antigravity existed), I designed it. I described my problem in plain English and asked the AI to help me build a lightweight script that would recursively scan a project folder, cherry-pick the important files, and flatten everything into one comprehensive Markdown file. [RepoLiner](https://davidtiberias.github.io/RepoLiner/) was my solution, born from the simple need to create a single source of truth. It wasn't designed to be fancy - for heavy-duty production work with token counting and secret detection, a tool like Repomix is a better fit - but for this project, it was the perfect, pragmatic tool.
 
 ---
 
@@ -38,7 +40,7 @@ My project didn't start with `git init` or a boilerplate template. It started wi
 - `feature.md`: A list of the essential "rooms" and functionalities the site needed.
 - `roadmap.md`: A rough construction schedule, outlining the phases of development.
 
-That was the entirety of my starting "repo." Just text. I ran this humble seed through the workflow, and to my astonishment, a functional website emerged. But it wasn't great. It felt like the exposed concrete and rebar of a building's superstructure—structurally sound, but cold, bare, and lacking the finesse of a finished space. It proved the workflow was viable, but the result wasn’t a place anyone would want to spend time in.
+That was the entirety of my starting "repo." Just text. I ran this humble seed through the workflow, and to my astonishment, a functional website emerged. But it wasn't great. It felt like the exposed concrete and rebar of a building's superstructure - structurally sound, but cold, bare, and lacking the finesse of a finished space. It proved the workflow was viable, but the result wasn’t a place anyone would want to spend time in.
 
 ---
 
@@ -48,7 +50,7 @@ To transform that barebones structure into this finished Hub, I didn't improvise
 
 ### **Step 01: The Conceptual Brainstorm (Gemini Flash)**
 
-My process began in what I can only describe as controlled chaos. Using Gemini Flash felt like the initial, frenzied sketching phase of an architectural project. I threw out a storm of ideas for new features, better layouts, and a more engaging user experience—interactive tours, improved article indexing, accessibility tweaks. The output was noisy and often impractical, but that was the point. This was divergent thinking, designed to generate a wealth of raw material before imposing any constraints.
+My process began in what I can only describe as controlled chaos. Using Gemini Flash felt like the initial, frenzied sketching phase of an architectural project. I threw out a storm of ideas for new features, better layouts, and a more engaging user experience - interactive tours, improved article indexing, accessibility tweaks. The output was noisy and often impractical, but that was the point. This was divergent thinking, designed to generate a wealth of raw material before imposing any constraints.
 
 ### **Step 02: Design Development & Specification (Microsoft Copilot)**
 
@@ -58,9 +60,9 @@ This phase was about taming the chaos. Copilot acted as my technical translator,
 
 With a clear set of prompts, ChatGPT became my draftsman. It expanded the instructions into updated and more detailed `feature.md` and `roadmap.md` documents. These weren't just simple lists anymore; they contained structured outlines for new components, user flows, and technical requirements. These Markdown files became the official "schematic design" for the next phase of construction.
 
-### **Step 03.5: The Master Blueprint (The First Repo Dump with RepoLiner)**
+### **Step 03.5: The Master Blueprint (The First Repo Dump with [RepoLiner](https://davidtiberias.github.io/RepoLiner/))**
 
-This was a pivotal moment. I ran RepoLiner on the entire project folder, including the newly updated Markdown plans and the existing, barebones codebase. The script ingested everything and produced a single, comprehensive snapshot: the "master blueprint." For the first time, I had a document that captured both the existing state of the "building" and the detailed plans for its "renovation." The project was no longer a collection of scattered files and ideas; it was a coherent, unified whole.
+This was a pivotal moment. I ran [RepoLiner](https://davidtiberias.github.io/RepoLiner/) on the entire project folder, including the newly updated Markdown plans and the existing, barebones codebase. The script ingested everything and produced a single, comprehensive snapshot: the "master blueprint." For the first time, I had a document that captured both the existing state of the "building" and the detailed plans for its "renovation." The project was no longer a collection of scattered files and ideas; it was a coherent, unified whole.
 
 ### **Step 04: The Construction Schedule (Deterministic Task Generation with AI Studio)**
 
@@ -70,9 +72,9 @@ With the master blueprint as its sole input, AI Studio acted as the project mana
 
 Antigravity and its agents were my specialized crew of digital contractors. Each agent was given a set of tasks from the schedule. They took the instructions and executed them, writing the new components, refactoring the existing code, and wiring everything together. This was the heavy lifting, where the plans on the blueprint were meticulously translated into a tangible, functional structure.
 
-### **Step 06 & 06.5: Site Inspection and As-Built Updates (Debugging with Search AI and Refreshing with RepoLiner)**
+### **Step 06 & 06.5: Site Inspection and As-Built Updates (Debugging with Search AI and Refreshing with [RepoLiner](https://davidtiberias.github.io/RepoLiner/))**
 
-No construction project is without its problems. When bugs surfaced or builds failed, Search AI became my site inspector. I fed it the raw error logs and the latest repo dump. It would analyze the context and suggest fixes. After applying a correction, the most crucial step was to immediately run RepoLiner again. This generated an updated, "as-built" blueprint reflecting the changes. This prevented any AI agent from working with outdated plans, a common source of catastrophic errors in complex projects.
+No construction project is without its problems. When bugs surfaced or builds failed, Search AI became my site inspector. I fed it the raw error logs and the latest repo dump. It would analyze the context and suggest fixes. After applying a correction, the most crucial step was to immediately run [RepoLiner](https://davidtiberias.github.io/RepoLiner/) again. This generated an updated, "as-built" blueprint reflecting the changes. This prevented any AI agent from working with outdated plans, a common source of catastrophic errors in complex projects.
 
 ### **Step 07: The Post-Mortem (The Solution Feedback Loop)**
 
@@ -82,7 +84,7 @@ After each major feature implementation and debugging cycle, the verified fixes 
 
 ## The Unseen Foundation: The Invariants That Prevented Collapse
 
-In architecture, we rely on immutable principles—building codes, structural mechanics, material tolerances—to keep buildings standing. They aren't suggestions; they are the guardrails against disaster. The Vibecoding Playbook is built on a similar set of non-negotiable invariants.
+In architecture, we rely on immutable principles - building codes, structural mechanics, material tolerances - to keep buildings standing. They aren't suggestions; they are the guardrails against disaster. The Vibecoding Playbook is built on a similar set of non-negotiable invariants.
 
 - **The Master Blueprint Invariant:** All planning and debugging must start from the latest repo dump. This is the single source of truth. Working from old plans is malpractice.
 - **The Clean Site Invariant:** Before starting a new task, all previous conversations (context windows) must be cleared. This prevents "context drift" and hallucinations, the digital equivalent of a contractor misremembering a verbal instruction from last week.
@@ -103,7 +105,7 @@ Throughout this journey, I learned to see the AI tools not as monolithic oracles
 - **ChatGPT:** The diligent drafter and documentarian. Superb at creating comprehensive roadmaps and outlines, but with a tendency to over-specify, requiring its output to be treated as a draft.
 - **Google AI Studio:** The rigid but reliable project manager. Its adherence to deterministic instruction makes it the perfect tool for creating reproducible build plans.
 - **Antigravity:** The powerful but silent construction crew. It executes tasks with formidable efficiency, but its black-box nature makes it difficult to debug without clean logs and a dedicated inspection tool.
-- **RepoLiner:** My fast, simple, and indispensable blueprint generator. While it lacks the advanced features of production-grade tools, its simplicity is its greatest strength.
+- **[RepoLiner](https://davidtiberias.github.io/RepoLiner/):** My fast, simple, and indispensable blueprint generator. While it lacks the advanced features of production-grade tools, its simplicity is its greatest strength.
 
 The true power of the workflow lies not in any single tool, but in the art of orchestrating this diverse team, sequencing their contributions so that the strengths of one compensate for the weaknesses of another.
 
@@ -115,7 +117,7 @@ If you are an architect, engineer, or any domain expert outside of software, and
 
 1.  **Start with What You Know: Documentation.** Don't try to code. Begin with a project brief (`README.md`) and a schedule (`roadmap.md`). This is our native language. A solid plan is the best foundation.
 2.  **Automate Your Blueprints.** Make the process of creating a repo dump a single command. This will become the most important tool in your arsenal, your single source of truth in a complex project.
-3.  **Embrace the Role of the Director.** Your job is not to write the code. Your job is to orchestrate the AI, to clarify intent, and to rigorously verify the work—exactly as you would manage a team of contractors on a job site.
+3.  **Embrace the Role of the Director.** Your job is not to write the code. Your job is to orchestrate the AI, to clarify intent, and to rigorously verify the work - exactly as you would manage a team of contractors on a job site.
 4.  **Trust the Process.** The workflow is your construction schedule and your safety checklist in one. Follow the steps and honor the invariants, especially when the project becomes complex.
 
 ---

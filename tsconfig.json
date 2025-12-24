@@ -30,9 +30,7 @@
       "vite/client"
     ]
   },
-  "include": [
-    "src"
-  ], // This tells TypeScript to only check files within the 'src' directory
+"include": ["src", "pages", "renderer"],
   "references": [
     {
       "path": "./tsconfig.node.json"
