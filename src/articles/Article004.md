@@ -35,9 +35,3 @@ From one angle, [RepoLiner](https://davidtiberias.github.io/RepoLiner/) is an **
 ### Wrap‑up
 
 [RepoLiner](https://davidtiberias.github.io/RepoLiner/) is more than a utility; it’s a philosophy of order. It transforms chaos into clarity, giving both humans and machines a way to see the whole picture. Whether you’re feeding an AI, preparing for an audit, or just tired of spelunking through your own directories, [RepoLiner](https://davidtiberias.github.io/RepoLiner/) offers brutalist‑grade consolidation with a touch of personality.
-
----
-
-This version reads like an article you’d publish in your **Articles view** - narrative, flowing, and engaging, rather than a step‑by‑step manual.
-
-Would you like me to also adapt the **Fragmentation Tax** essay into this same narrative style so your Articles section has a consistent voice?
