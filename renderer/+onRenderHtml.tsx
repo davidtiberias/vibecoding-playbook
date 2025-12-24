@@ -27,6 +27,18 @@ export const onRenderHtml = async (pageContext: PageContext) => {
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vibecoding-playbook/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH9SLL9D0"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          
+          gtag('config', 'G-EGH9SLL9D0');
+        </script>
+
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
