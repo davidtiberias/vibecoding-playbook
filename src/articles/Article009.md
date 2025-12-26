@@ -2,6 +2,13 @@
 title: "Iteration Over Perfection: How I Shape AI Into My Voice"
 date: "2025-12-24"
 index: 9
+keywords:
+  - "Humanizing AI content"
+  - "Editing AI generated text"
+  - "AI writing workflow"
+  - "Iterative prompting strategies"
+  - "Shaping AI voice"
+  - "Process over perfection"
 ---
 
 **_I didn’t stop at ten. I stopped at nine._**

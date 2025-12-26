@@ -2,6 +2,13 @@
 title: "The Landscape of Software Engineering in Late 2025"
 date: "2025-12-23"
 index: 2
+keywords:
+  - "What is vibecoding"
+  - "Andrej Karpathy vibecoding definition"
+  - "Software engineering trends 2025"
+  - "AI coding assistant comparison"
+  - "Gemini 3 Flash for coding"
+  - "Future of software development"
 ---
 
 The landscape of software engineering in late 2025 has undergone a seismic shift, transitioning from the deterministic world of syntax and variables to a fluid, intent-driven paradigm popularly known as **"vibecoding"**. This evolution, catalyzed by computer scientist Andrej Karpathy in February 2025, represents more than a mere change in tooling; it is a fundamental re-architecture of the relationship between human intention and executable code.

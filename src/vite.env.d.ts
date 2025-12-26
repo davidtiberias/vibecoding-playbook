@@ -17,6 +17,7 @@ declare module 'vike/types' {
         title: string;
         date: string;
         content: string;
+        keywords?: string[];
       };
       prevArticle?: { title: string; slug: string } | null;
       nextArticle?: { title: string; slug: string } | null;

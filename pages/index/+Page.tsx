@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { WORKFLOW_STEPS, SYSTEM_INVARIANTS, TOOL_ANALYSIS } from "../../src/constants";
 import { ViewType } from "../../src/types";
+import { usePageContext } from "../../renderer/usePageContext";
 import {
   AnalysisTable,
   Articles,
@@ -13,14 +14,30 @@ import {
 } from "../../src/components";
 
 const App: React.FC = () => {
-  const [activeView, setActiveView] = useState<ViewType>("workflow");
-  const [selectedStepIndex, setSelectedStepIndex] = useState<number | null>(
-    null
-  );
+  const pageContext = usePageContext();
+  
+  // 1. Derive Active View from URL
+  // We use the 'view' parameter defined in +route.ts
+  const { view } = pageContext.routeParams;
+  
+  // Map URL slugs to internal ViewType
+  const viewMap: Record<string, ViewType> = {
+    'workflow-map': 'workflow',
+    'invariants': 'invariants',
+    'analysis': 'analysis',
+    'strategy': 'strategy',
+    'articles': 'articles'
+  };
+
+  // Default to 'workflow' if at root '/' or unknown route
+  const activeView: ViewType = viewMap[view] || 'workflow';
+
+  const [selectedStepIndex, setSelectedStepIndex] = useState<number | null>(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   const handleStepSelect = (index: number) => {
-    setActiveView("workflow");
+    // If user clicks a step in the sidebar, we ensure we are on the workflow view
+    // (Though sidebar is currently only visible in workflow view anyway)
     setSelectedStepIndex(index);
   };
 
@@ -32,6 +49,38 @@ const App: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Helper for navigation links
+  const NavLink = ({ href, view, label, icon }: { href: string, view: ViewType, label: string, icon?: string }) => {
+    const isActive = activeView === view;
+    return (
+      <a
+        href={`/vibecoding-playbook${href}`}
+        className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all flex items-center gap-2 ${
+          isActive
+            ? "bg-white text-indigo-600 shadow-sm"
+            : "text-slate-600 hover:text-indigo-600"
+        }`}
+      >
+        {icon && <span className="material-symbols-outlined text-lg">{icon}</span>}
+        {label}
+      </a>
+    );
+  };
+
+  // Mobile Nav Button Helper
+  const MobileNavBtn = ({ href, view, label, icon }: { href: string, view: ViewType, label: string, icon: string }) => {
+    const isActive = activeView === view;
+    return (
+      <a
+        href={`/vibecoding-playbook${href}`}
+        className={`flex flex-col items-center gap-1 ${isActive ? "text-indigo-600" : "text-slate-400"}`}
+      >
+        <span className="material-symbols-outlined">{icon}</span>
+        <span className="text-[10px] font-bold uppercase">{label}</span>
+      </a>
+    );
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col relative">
@@ -55,52 +104,13 @@ const App: React.FC = () => {
           </div>
 
           <nav className="hidden md:flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
-            <button
-              onClick={() => setActiveView("workflow")}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${activeView === "workflow"
-                ? "bg-white text-indigo-600 shadow-sm"
-                : "text-slate-600 hover:text-indigo-600"
-                }`}
-            >
-              Workflow Map
-            </button>
-            <button
-              onClick={() => setActiveView("invariants")}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${activeView === "invariants"
-                ? "bg-white text-indigo-600 shadow-sm"
-                : "text-slate-600 hover:text-indigo-600"
-                }`}
-            >
-              Invariants
-            </button>
-            <button
-              onClick={() => setActiveView("analysis")}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${activeView === "analysis"
-                ? "bg-white text-indigo-600 shadow-sm"
-                : "text-slate-600 hover:text-indigo-600"
-                }`}
-            >
-              Analysis
-            </button>
-            <button
-              onClick={() => setActiveView("strategy")}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${activeView === "strategy"
-                ? "bg-white text-indigo-600 shadow-sm"
-                : "text-slate-600 hover:text-indigo-600"
-                }`}
-            >
-              Strategy
-            </button>
-            <button
-              onClick={() => setActiveView("articles")}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all ${activeView === "articles"
-                ? "bg-white text-indigo-600 shadow-sm"
-                : "text-slate-600 hover:text-indigo-600"
-                }`}
-            >
-              Articles
-            </button>
+            <NavLink href="/workflow-map" view="workflow" label="Workflow Map" />
+            <NavLink href="/invariants" view="invariants" label="Invariants" />
+            <NavLink href="/analysis" view="analysis" label="Analysis" />
+            <NavLink href="/strategy" view="strategy" label="Strategy" />
+            <NavLink href="/articles" view="articles" label="Articles" />
           </nav>
+          
           <a
             href="https://davidtiberias.github.io"
             target="_blank"
@@ -172,46 +182,11 @@ const App: React.FC = () => {
 
       {/* Mobile Navigation Bar */}
       <nav className="md:hidden fixed bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md border border-slate-200 p-2 rounded-2xl shadow-2xl flex items-center justify-around z-50">
-        <button
-          onClick={() => setActiveView("workflow")}
-          className={`flex flex-col items-center gap-1 ${activeView === "workflow" ? "text-indigo-600" : "text-slate-400"
-            }`}
-        >
-          <span className="material-symbols-outlined">account_tree</span>
-          <span className="text-[10px] font-bold uppercase">Workflow</span>
-        </button>
-        <button
-          onClick={() => setActiveView("invariants")}
-          className={`flex flex-col items-center gap-1 ${activeView === "invariants" ? "text-indigo-600" : "text-slate-400"
-            }`}
-        >
-          <span className="material-symbols-outlined">shield</span>
-          <span className="text-[10px] font-bold uppercase">Invariants</span>
-        </button>
-        <button
-          onClick={() => setActiveView("analysis")}
-          className={`flex flex-col items-center gap-1 ${activeView === "analysis" ? "text-indigo-600" : "text-slate-400"
-            }`}
-        >
-          <span className="material-symbols-outlined">analytics</span>
-          <span className="text-[10px] font-bold uppercase">Analysis</span>
-        </button>
-        <button
-          onClick={() => setActiveView("strategy")}
-          className={`flex flex-col items-center gap-1 ${activeView === "strategy" ? "text-indigo-600" : "text-slate-400"
-            }`}
-        >
-          <span className="material-symbols-outlined">strategy</span>
-          <span className="text-[10px] font-bold uppercase">Strategy</span>
-        </button>
-        <button
-          onClick={() => setActiveView("articles")}
-          className={`flex flex-col items-center gap-1 ${activeView === "articles" ? "text-indigo-600" : "text-slate-400"
-            }`}
-        >
-          <span className="material-symbols-outlined">article</span>
-          <span className="text-[10px] font-bold uppercase">Articles</span>
-        </button>
+        <MobileNavBtn href="/workflow-map" view="workflow" label="Workflow" icon="account_tree" />
+        <MobileNavBtn href="/invariants" view="invariants" label="Invariants" icon="shield" />
+        <MobileNavBtn href="/analysis" view="analysis" label="Analysis" icon="analytics" />
+        <MobileNavBtn href="/strategy" view="strategy" label="Strategy" icon="strategy" />
+        <MobileNavBtn href="/articles" view="articles" label="Articles" icon="article" />
       </nav>
 
       {/* Footer */}

@@ -2,6 +2,15 @@
 title: "The Fragmentation Tax: Why AI Studio is the Warren Buffett of Vibecoding"
 date: "2025-12-23"
 index: 1
+keywords:
+  - "Google AI Studio vs Antigravity"
+  - "Gemini 3 Pro cost"
+  - "AI coding workflow comparison"
+  - "Vibecoding fragmentation tax"
+  - "Is Google Antigravity worth it"
+  - "Gemini 3 Pro token cost"
+  - "AI context caching explained"
+  - "Agentic AI vs Linear Chat"
 ---
 
 In the era of "Vibecoding," a fundamental architectural rift has emerged. It is a conflict between two opposing philosophies of machine intelligence: the monolithic, high-density efficiency of **Google AI Studio** and the high-frequency, fragmented "Agency" of **Antigravity**.

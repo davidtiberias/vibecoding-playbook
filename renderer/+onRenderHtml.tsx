@@ -20,25 +20,57 @@ export const onRenderHtml = async (pageContext: PageContext) => {
     : "";
 
   // --- SEO LOGIC START ---
-  // Default values
+  const baseUrl = "https://davidtiberias.github.io/vibecoding-playbook";
+  // Ensure urlPathname doesn't have a trailing slash for consistency, unless it's root
+  const cleanPath = pageContext.urlPathname === "/" ? "" : pageContext.urlPathname.replace(/\/$/, "");
+  const canonicalUrl = `${baseUrl}${cleanPath}`;
+  
   let title = "Vibecoding Playbook";
-  let description =
-    "An interactive documentation platform for the Vibecoding Playbook v2.1, featuring step-by-step guidance, system invariants, and layered tool analysis.";
+  let description = "An interactive documentation platform for the Vibecoding Playbook v2.1, featuring step-by-step guidance, system invariants, and layered tool analysis.";
+  let keywords = "vibecoding, ai coding, software engineering, llm workflow"; // Default keywords
 
-  // Dynamic values based on page data
+  // Schema.org JSON-LD Data
+  // FIX: Added type annotation : Record<string, any> to allow different schema structures
+  let jsonLd: Record<string, any> = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Vibecoding Playbook",
+    "url": baseUrl,
+  };
+
   if (pageContext.data?.article) {
-    // For Article Pages
-    title = `${pageContext.data.article.title} - Vibecoding Playbook`;
-    // Use the first 160 chars of content or a generic description
-    description = `Read "${pageContext.data.article.title}" on the Vibecoding Playbook.`;
+    const article = pageContext.data.article;
+    title = `${article.title} - Vibecoding Playbook`;
+    description = `Read "${article.title}" on the Vibecoding Playbook.`;
+    // Use article specific keywords if available
+    if (article.keywords && article.keywords.length > 0) {
+      keywords = article.keywords.join(", ");
+    }
+    jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": article.title,
+      "description": description,
+      "keywords": keywords,
+      "author": {
+        "@type": "Person",
+        "name": "David Tiberias",
+        "url": "https://davidtiberias.github.io"
+      },
+      "datePublished": article.date,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": canonicalUrl
+      }
+    };
   } else if (
     pageContext.urlPathname === "/" ||
     pageContext.urlPathname === "/vibecoding-playbook/"
   ) {
     // For the Home/Index Page
     title = "Workflow Map - Vibecoding Playbook";
-    description =
-      "Explore the step-by-step Vibecoding Playbook, a verification-driven multi-AI loop designed for deterministic software development.";
+    description = "Explore the step-by-step guide to Vibecoding within the Vibecoding Playbook, a verification-driven multi-AI loop designed for deterministic software development.";
+    keywords = "vibecoding, google ai studio vs antigravity, ai coding workflow, repoliner, cursor vs windsurf";
   }
   // --- SEO LOGIC END ---
 
@@ -52,9 +84,20 @@ export const onRenderHtml = async (pageContext: PageContext) => {
         <!-- SEO Tags Injected Directly into Head -->
         <title>${title}</title>
         <meta name="description" content="${description}" />
+        <meta name="keywords" content="${keywords}" />
+        <link rel="canonical" href="${canonicalUrl}" />
+        
+        <!-- Open Graph -->
         <meta property="og:title" content="${title}" />
         <meta property="og:description" content="${description}" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="${pageContext.data?.article ? 'article' : 'website'}" />
+        <meta property="og:url" content="${canonicalUrl}" />
+        <meta property="og:site_name" content="Vibecoding Playbook" />
+        
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+          ${dangerouslySkipEscape(JSON.stringify(jsonLd))}
+        </script>
 
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH9SLL9D0"></script>

@@ -39,7 +39,8 @@ export const data = async (pageContext: PageContext) => {
   // 4. Get Content for current article
   const currentMeta = allArticles[currentIndex];
   const rawContent = await fs.readFile(path.join(articlesDir, currentMeta.file), 'utf-8');
-  const { content } = matter(rawContent);
+  // Extract 'data' (frontmatter) again to get keywords
+  const { content, data: frontmatter } = matter(rawContent);
   const match = currentMeta.file.match(/Article(\d+)\.md$/);
   const id = match ? match[1] : currentMeta.file;
 
@@ -48,7 +49,9 @@ export const data = async (pageContext: PageContext) => {
     index: currentMeta.index,
     title: currentMeta.title,
     date: currentMeta.date,
-    content
+    content,
+    // Pass the keywords array, or default to empty
+    keywords: frontmatter.keywords || [] 
   };
 
   // 5. Get Prev/Next

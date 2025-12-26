@@ -2,6 +2,15 @@
 title: "RepoLiner: The Brutalist Grade Code Consolidator"
 date: "2025-12-23"
 index: 4
+keywords:
+  - "RepoLiner"
+  - "RepoLiner GitHub"
+  - "RepoLiner GitHub repository"
+  - "Convert git repo to markdown"
+  - "Feed entire codebase to ChatGPT"
+  - "Repomix alternative"
+  - "Prepare code for LLM context"
+  - "Python script to merge files"
 ---
 
 Walk into any developer’s project folder and you’ll often find chaos: stray scripts, forgotten configs, and a directory tree that looks more like a crime scene than a codebase. It takes a certain kind of genius to create such entropy, but it takes an even sharper tool to tame it. That’s where **[RepoLiner](https://davidtiberias.github.io/RepoLiner/)** steps in - the adult in the room, the vacuum cleaner for your scattered files.

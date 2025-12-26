@@ -2,6 +2,13 @@
 title: "Mapping the Vibecoding Playbook: A Deep Dive into the Workflow Map, Invariants, Tools, and Real-World Practice"
 date: "2025-12-24"
 index: 7
+keywords:
+  - "Vibecoding workflow map"
+  - "AI development methodology"
+  - "Deterministic AI coding"
+  - "System invariants in software"
+  - "Prompt engineering framework"
+  - "Human-in-the-loop AI validation"
 ---
 
 ## Introduction: Why The Workflow Matters
