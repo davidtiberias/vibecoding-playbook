@@ -1,5 +1,4 @@
-// src/components/Monetization.tsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import { AD_LIBRARY } from "../config/ads";
 import AdBrick from "./AdBrick";
 
@@ -31,25 +30,23 @@ const DEFAULT_BRICK_CONFIG: BrickConfig = {
   animationDelay: "0ms",
 };
 
-// --- HELPER FUNCTIONS ---
+// --- HELPER FUNCTIONS (Unchanged) ---
 
 const getRandomGradient = () =>
   NEON_PALETTE[Math.floor(Math.random() * NEON_PALETTE.length)];
 
 const generateFeatureBrick = (): BrickConfig => {
+  // ... (logic remains the same)
   let colSpan, rowSpan, ratio;
   do {
     const archetype = Math.random();
     if (archetype > 0.8) {
-      // Skyscraper (Vertical 1:10 focus)
       colSpan = Math.ceil(Math.random() * 2);
       rowSpan = Math.floor(Math.random() * 5) + 6;
     } else if (archetype > 0.6) {
-      // Banner (Horizontal 10:1 focus)
       colSpan = Math.floor(Math.random() * 5) + 6;
       rowSpan = Math.ceil(Math.random() * 2);
     } else {
-      // Standard Chunk
       colSpan = Math.ceil(Math.random() * 4);
       rowSpan = Math.ceil(Math.random() * 4);
     }
@@ -69,20 +66,18 @@ const generateFeatureBrick = (): BrickConfig => {
 };
 
 const generateGroutBrick = (): BrickConfig => {
+  // ... (logic remains the same)
   const type = Math.random();
   let colSpan = 1;
   let rowSpan = 1;
 
   if (type > 0.7) {
-    // Vertical Strip (1x3 to 1x5)
     colSpan = 1;
     rowSpan = Math.floor(Math.random() * 3) + 3;
   } else if (type > 0.4) {
-    // Horizontal Strip (2x1 to 4x1)
     colSpan = Math.floor(Math.random() * 3) + 2;
     rowSpan = 1;
   } else {
-    // Pure 1x1 Sand
     colSpan = 1;
     rowSpan = 1;
   }
@@ -97,36 +92,67 @@ const generateGroutBrick = (): BrickConfig => {
   };
 };
 
-// --- MAIN COMPONENT ---
+// --- MAIN COMPONENT (Updated) ---
 
 const Monetization: React.FC = () => {
-  const [bricks, setBricks] = useState<BrickConfig[]>([]);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   const FEATURE_COUNT = 50;
   const GROUT_COUNT = 50;
   const TOTAL_ITEMS = FEATURE_COUNT + GROUT_COUNT;
 
-  const displayAds = Array.from({ length: TOTAL_ITEMS }).map((_, i) => {
-    return AD_LIBRARY[i % AD_LIBRARY.length];
-  });
-
-  useEffect(() => {
+  // FIX: Use a lazy initializer function for useState to create the bricks
+  // This computes the initial state once, before the first render,
+  // and avoids the unnecessary re-render that the linter was warning about.
+  const [bricks] = useState(() => {
     const featureBricks = Array.from({ length: FEATURE_COUNT }).map(
       generateFeatureBrick
     );
     const groutBricks = Array.from({ length: GROUT_COUNT }).map(
       generateGroutBrick
     );
+    return [...featureBricks, ...groutBricks];
+  });
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    setBricks([...featureBricks, ...groutBricks]);
+  const displayAds = Array.from({ length: TOTAL_ITEMS }).map((_, i) => {
+    return AD_LIBRARY[i % AD_LIBRARY.length];
+  });
+
+  // REMOVED: The useEffect that was causing the linting error is no longer needed.
+
+  // ... (the rest of the component remains the same)
+  useLayoutEffect(() => {
+    const gridEl = gridRef.current;
+    const container = gridEl?.parentElement;
+    if (!container) return;
+
+    const syncGridColumns = () => {
+      const containerWidth = container.clientWidth;
+      const fixedCellSize = 60;
+      const colsThatFit = Math.max(
+        1,
+        Math.floor(containerWidth / fixedCellSize)
+      );
+      gridEl.style.setProperty("--grid-cols", String(colsThatFit));
+    };
+
+    syncGridColumns();
+
+    const resizeObserver = new ResizeObserver(syncGridColumns);
+    resizeObserver.observe(container);
+
+    return () => resizeObserver.disconnect();
   }, []);
 
   return (
     <div className="w-full h-full bg-slate-950 p-2 overflow-hidden">
       <div
+        ref={gridRef}
         role="grid"
-        className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-2 auto-rows-[50px] grid-flow-dense w-full max-w-[1800px] mx-auto"
+        className="grid gap-2 grid-flow-dense max-w-[1800px] mx-auto auto-rows-[60px]"
+        style={{
+          gridTemplateColumns: "repeat(var(--grid-cols, 18), 60px)",
+        }}
       >
         {displayAds.map((ad, index) => {
           const config = bricks[index] || DEFAULT_BRICK_CONFIG;

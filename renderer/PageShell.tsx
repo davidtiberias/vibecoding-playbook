@@ -149,9 +149,6 @@ export function PageShell({
                   />
                 ))}
               </nav>
-
-              {/* Placeholder for alignment */}
-              <div className="w-10 md:w-0"></div>
             </div>
           </header>
 

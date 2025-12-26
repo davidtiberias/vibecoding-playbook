@@ -1,3 +1,15 @@
+/* In your global CSS file */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  @keyframes jiggle {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(0.98) rotate(-1deg); }
+    75% { transform: scale(1.02) rotate(1deg); }
+  }
+  .animate-jiggle {
+    animation: jiggle 0.15s ease-in-out;
+  }
+}

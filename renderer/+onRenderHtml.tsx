@@ -113,6 +113,11 @@ export const onRenderHtml = async (pageContext: PageContext) => {
           ${dangerouslySkipEscape(JSON.stringify(jsonLd))}
         </script>
 
+        <!-- Google AdSense -->
+        <meta name="google-adsense-account" content="ca-pub-3752790282214951">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3752790282214951"
+     crossorigin="anonymous"></script>
+
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH9SLL9D0"></script>
         <script>
@@ -127,6 +132,7 @@ export const onRenderHtml = async (pageContext: PageContext) => {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        
         <style>
           body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
           .font-mono { font-family: 'JetBrains Mono', monospace; }
