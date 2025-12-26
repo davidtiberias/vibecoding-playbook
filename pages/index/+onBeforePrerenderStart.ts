@@ -6,6 +6,7 @@ export default function() {
     '/invariants',
     '/analysis',
     '/strategy',
-    '/articles'
+    '/articles',
+    '/monetization'
   ];
 }

@@ -22,11 +22,15 @@ export const onRenderHtml = async (pageContext: PageContext) => {
   // --- SEO LOGIC START ---
   const baseUrl = "https://davidtiberias.github.io/vibecoding-playbook";
   // Ensure urlPathname doesn't have a trailing slash for consistency, unless it's root
-  const cleanPath = pageContext.urlPathname === "/" ? "" : pageContext.urlPathname.replace(/\/$/, "");
+  const cleanPath =
+    pageContext.urlPathname === "/"
+      ? ""
+      : pageContext.urlPathname.replace(/\/$/, "");
   const canonicalUrl = `${baseUrl}${cleanPath}`;
-  
+
   let title = "Vibecoding Playbook";
-  let description = "An interactive documentation platform for the Vibecoding Playbook v2.1, featuring step-by-step guidance, system invariants, and layered tool analysis.";
+  let description =
+    "An interactive documentation platform for the Vibecoding Playbook v2.1, featuring step-by-step guidance, system invariants, and layered tool analysis.";
   let keywords = "vibecoding, ai coding, software engineering, llm workflow"; // Default keywords
 
   // Schema.org JSON-LD Data
@@ -34,8 +38,8 @@ export const onRenderHtml = async (pageContext: PageContext) => {
   let jsonLd: Record<string, any> = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Vibecoding Playbook",
-    "url": baseUrl,
+    name: "Vibecoding Playbook",
+    url: baseUrl,
   };
 
   if (pageContext.data?.article) {
@@ -49,19 +53,19 @@ export const onRenderHtml = async (pageContext: PageContext) => {
     jsonLd = {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": article.title,
-      "description": description,
-      "keywords": keywords,
-      "author": {
+      headline: article.title,
+      description: description,
+      keywords: keywords,
+      author: {
         "@type": "Person",
-        "name": "David Tiberias",
-        "url": "https://davidtiberias.github.io"
+        name: "David Tiberias",
+        url: "https://davidtiberias.github.io",
       },
-      "datePublished": article.date,
-      "mainEntityOfPage": {
+      datePublished: article.date,
+      mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": canonicalUrl
-      }
+        "@id": canonicalUrl,
+      },
     };
   } else if (
     pageContext.urlPathname === "/" ||
@@ -69,8 +73,16 @@ export const onRenderHtml = async (pageContext: PageContext) => {
   ) {
     // For the Home/Index Page
     title = "Workflow Map - Vibecoding Playbook";
-    description = "Explore the step-by-step guide to Vibecoding within the Vibecoding Playbook, a verification-driven multi-AI loop designed for deterministic software development.";
-    keywords = "vibecoding, google ai studio vs antigravity, ai coding workflow, repoliner, cursor vs windsurf";
+    description =
+      "Explore the step-by-step guide to Vibecoding within the Vibecoding Playbook, a verification-driven multi-AI loop designed for deterministic software development.";
+    keywords =
+      "vibecoding, google ai studio vs antigravity, ai coding workflow, repoliner, cursor vs windsurf";
+  } else if (pageContext.urlPathname === "/monetization") {
+    title = "Infrastructure Lab – Vibecoding Playbook";
+    description =
+      "An interactive, recursive analysis of the toolstack used in the Vibecoding workflow. No popups. No hype.";
+    keywords =
+      "developer tools, vibecoding infrastructure, ai tooling analysis, ad monetization experiment";
   }
   // --- SEO LOGIC END ---
 
@@ -90,7 +102,9 @@ export const onRenderHtml = async (pageContext: PageContext) => {
         <!-- Open Graph -->
         <meta property="og:title" content="${title}" />
         <meta property="og:description" content="${description}" />
-        <meta property="og:type" content="${pageContext.data?.article ? 'article' : 'website'}" />
+        <meta property="og:type" content="${
+          pageContext.data?.article ? "article" : "website"
+        }" />
         <meta property="og:url" content="${canonicalUrl}" />
         <meta property="og:site_name" content="Vibecoding Playbook" />
         

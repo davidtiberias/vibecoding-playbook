@@ -57,7 +57,7 @@ const Articles: React.FC = () => {
         <div className="sticky top-24 space-y-6">
           <div>
             <h2 className="text-2xl font-bold text-slate-900">Articles</h2>
-            <p className="text-sm text-slate-500 mt-2 text-sm leading-relaxed">
+            <p className="text-sm text-slate-500 mt-2 leading-relaxed">
               Deep dives into the philosophy, mechanics, and future of Vibecoding.
             </p>
           </div>

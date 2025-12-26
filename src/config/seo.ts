@@ -27,4 +27,8 @@ export const seoConfig: Record<ViewType, SeoConfig> = {
         title: "Vibecoding Articles",
         description: "Explore a collection of articles on AI development workflows, system invariants, and advanced tool analysis.",
     },
+    monetization: {
+        title: "Infrastructure Lab",
+        description: "An interactive, recursive analysis of the toolstack used in the Vibecoding workflow.",
+    },
 };

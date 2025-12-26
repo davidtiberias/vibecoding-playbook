@@ -35,4 +35,4 @@ export type ViewType =
   | "analysis"
   | "strategy"
   | "articles"
-  | "articles";
+  | "monetization";

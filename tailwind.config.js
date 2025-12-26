@@ -3,8 +3,8 @@
 export default {
     content: [
         "./index.html",
-        "./src/**/*.{js,ts,jsx,tsx}", 
-        "./pages/**/*.{js,ts,jsx,tsx}", 
+        // This pattern safely scans all your code folders but ignores node_modules
+        "./{src,pages,renderer}/**/*.{js,ts,jsx,tsx}", 
     ],
     theme: {
         extend: {},

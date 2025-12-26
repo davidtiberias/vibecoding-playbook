@@ -7,4 +7,5 @@ export { default as Sidebar } from './Sidebar';
 export { default as StepDetail } from './StepDetail';
 export { default as Strategy } from './Strategy';
 export { default as SeoManager } from './SeoManager';
-// Add any new components here in the future
+export { default as Monetization } from './Monetization';
+export { default as AdBrick } from './AdBrick';
