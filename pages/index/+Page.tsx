@@ -13,6 +13,39 @@ import {
   SeoManager,
 } from "../../src/components";
 
+
+// --- FIX: Moved NavLink outside the App component ---
+const NavLink = ({ href, view, label, activeView }: { href: string, view: ViewType, label: string, activeView: ViewType }) => {
+  const isActive = activeView === view;
+  return (
+    <a
+      href={`/vibecoding-playbook${href}`}
+      className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all flex items-center gap-2 ${
+        isActive
+          ? "bg-white text-indigo-600 shadow-sm"
+          : "text-slate-600 hover:text-indigo-600"
+      }`}
+    >
+      {label}
+    </a>
+  );
+};
+
+// --- FIX: Moved MobileNavBtn outside the App component ---
+const MobileNavBtn = ({ href, view, label, icon, activeView }: { href: string, view: ViewType, label: string, icon: string, activeView: ViewType }) => {
+  const isActive = activeView === view;
+  return (
+    <a
+      href={`/vibecoding-playbook${href}`}
+      className={`flex flex-col items-center gap-1 ${isActive ? "text-indigo-600" : "text-slate-400"}`}
+    >
+      <span className="material-symbols-outlined">{icon}</span>
+      <span className="text-[10px] font-bold uppercase">{label}</span>
+    </a>
+  );
+};
+
+
 const App: React.FC = () => {
   const pageContext = usePageContext();
   
@@ -50,37 +83,6 @@ const App: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Helper for navigation links
-  const NavLink = ({ href, view, label, icon }: { href: string, view: ViewType, label: string, icon?: string }) => {
-    const isActive = activeView === view;
-    return (
-      <a
-        href={`/vibecoding-playbook${href}`}
-        className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-all flex items-center gap-2 ${
-          isActive
-            ? "bg-white text-indigo-600 shadow-sm"
-            : "text-slate-600 hover:text-indigo-600"
-        }`}
-      >
-        {icon && <span className="material-symbols-outlined text-lg">{icon}</span>}
-        {label}
-      </a>
-    );
-  };
-
-  // Mobile Nav Button Helper
-  const MobileNavBtn = ({ href, view, label, icon }: { href: string, view: ViewType, label: string, icon: string }) => {
-    const isActive = activeView === view;
-    return (
-      <a
-        href={`/vibecoding-playbook${href}`}
-        className={`flex flex-col items-center gap-1 ${isActive ? "text-indigo-600" : "text-slate-400"}`}
-      >
-        <span className="material-symbols-outlined">{icon}</span>
-        <span className="text-[10px] font-bold uppercase">{label}</span>
-      </a>
-    );
-  };
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col relative">
@@ -104,11 +106,12 @@ const App: React.FC = () => {
           </div>
 
           <nav className="hidden md:flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
-            <NavLink href="/workflow-map" view="workflow" label="Workflow Map" />
-            <NavLink href="/invariants" view="invariants" label="Invariants" />
-            <NavLink href="/analysis" view="analysis" label="Analysis" />
-            <NavLink href="/strategy" view="strategy" label="Strategy" />
-            <NavLink href="/articles" view="articles" label="Articles" />
+            {/* --- FIX: Pass activeView as a prop --- */}
+            <NavLink href="/workflow-map" view="workflow" label="Workflow Map" activeView={activeView} />
+            <NavLink href="/invariants" view="invariants" label="Invariants" activeView={activeView} />
+            <NavLink href="/analysis" view="analysis" label="Analysis" activeView={activeView} />
+            <NavLink href="/strategy" view="strategy" label="Strategy" activeView={activeView} />
+            <NavLink href="/articles" view="articles" label="Articles" activeView={activeView} />
           </nav>
           
           <a
@@ -182,11 +185,11 @@ const App: React.FC = () => {
 
       {/* Mobile Navigation Bar */}
       <nav className="md:hidden fixed bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md border border-slate-200 p-2 rounded-2xl shadow-2xl flex items-center justify-around z-50">
-        <MobileNavBtn href="/workflow-map" view="workflow" label="Workflow" icon="account_tree" />
-        <MobileNavBtn href="/invariants" view="invariants" label="Invariants" icon="shield" />
-        <MobileNavBtn href="/analysis" view="analysis" label="Analysis" icon="analytics" />
-        <MobileNavBtn href="/strategy" view="strategy" label="Strategy" icon="strategy" />
-        <MobileNavBtn href="/articles" view="articles" label="Articles" icon="article" />
+        <MobileNavBtn href="/workflow-map" view="workflow" label="Workflow" icon="account_tree" activeView={activeView} />
+        <MobileNavBtn href="/invariants" view="invariants" label="Invariants" icon="shield" activeView={activeView} />
+        <MobileNavBtn href="/analysis" view="analysis" label="Analysis" icon="analytics" activeView={activeView} />
+        <MobileNavBtn href="/strategy" view="strategy" label="Strategy" icon="strategy" activeView={activeView} />
+        <MobileNavBtn href="/articles" view="articles" label="Articles" icon="article" activeView={activeView} />
       </nav>
 
       {/* Footer */}

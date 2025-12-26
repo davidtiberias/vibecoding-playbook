@@ -1,5 +1,5 @@
 // src/components/Articles.tsx
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import { usePageContext } from '../../renderer/usePageContext';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -8,14 +8,17 @@ const toSlug = (title: string) => title.toLowerCase().replace(/\s+/g, '-').repla
 
 const Articles: React.FC = () => {
   const pageContext = usePageContext();
-  const articles = pageContext.data?.articles || [];
+  // We no longer need the fallback here
+  const articles = pageContext.data?.articles;
 
   const [sortKey, setSortKey] = useState<"index" | "date" | "title">("index");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
   const [selectedArticleId, setSelectedArticleId] = useState<string | null>(null);
 
   const sortedArticles = useMemo(() => {
-    const sorted = [...articles].sort((a, b) => {
+    // --- FIX: Move the fallback logic inside useMemo ---
+    const articlesToUse = articles || []; 
+    const sorted = [...articlesToUse].sort((a, b) => {
       if (sortKey === "date") return new Date(a.date).getTime() - new Date(b.date).getTime();
       if (sortKey === "title") return a.title.localeCompare(b.title);
       return a.index - b.index;
@@ -23,16 +26,18 @@ const Articles: React.FC = () => {
     return sortOrder === "desc" ? sorted.reverse() : sorted;
   }, [articles, sortKey, sortOrder]);
 
-  // Select the first article by default if none selected
-  useEffect(() => {
-    if (!selectedArticleId && sortedArticles.length > 0) {
-      setSelectedArticleId(sortedArticles[0].id);
-    }
-  }, [sortedArticles, selectedArticleId]);
+  // --- FIX START ---
+  // REMOVED the problematic useEffect.
+  
+  // Instead, we derive the ID to use for this render.
+  // If the user has made a selection (`selectedArticleId` is not null), we use it.
+  // Otherwise, we fall back to the first article in the sorted list.
+  const effectiveSelectedId = selectedArticleId ?? (sortedArticles.length > 0 ? sortedArticles[0].id : null);
+  // --- FIX END ---
 
   const selectedArticleIndex = useMemo(
-    () => sortedArticles.findIndex(a => a.id === selectedArticleId),
-    [sortedArticles, selectedArticleId]
+    () => sortedArticles.findIndex(a => a.id === effectiveSelectedId),
+    [sortedArticles, effectiveSelectedId]
   );
 
   const selectedArticle = sortedArticles[selectedArticleIndex];
@@ -94,7 +99,7 @@ const Articles: React.FC = () => {
 
           <div className="relative max-h-[calc(100vh-20rem)] overflow-y-auto pr-2 space-y-3">
               {sortedArticles.map((article) => {
-                const isSelected = selectedArticleId === article.id;
+                const isSelected = effectiveSelectedId === article.id;
                 return (
                   <button
                     key={article.id}

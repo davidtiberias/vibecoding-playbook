@@ -17,6 +17,7 @@ export const PageContextProvider = ({
 };
 
 // Create the hook to consume the context
+// eslint-disable-next-line react-refresh/only-export-components
 export const usePageContext = () => {
   const pageContext = useContext(Context);
   if (!pageContext) {
