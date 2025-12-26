@@ -75,4 +75,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-seo-recursion-how-i-vibecoded-the-search-result-you-just-clicked</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
