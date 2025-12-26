@@ -3,6 +3,7 @@
 
 declare module 'vike/types' {
   interface PageContext {
+    urlPathname: string;
     Page: () => React.ReactElement;
     pageAssets?: {
       tag: string;
