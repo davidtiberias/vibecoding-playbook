@@ -11,10 +11,6 @@ keywords:
   - "Google search ranking case study"
 ---
 
-# The SEO Recursion: How I Vibecoded the Search Result You Just Clicked
-
----
-
 **You are reading this right now for one reason: The system worked.**
 
 You didn't stumble here by accident. You likely typed a query into Google—maybe about "vibecoding," "AI workflows," or "Google Antigravity"—and the algorithm served you this page. You saw a headline, a snippet of text that matched your intent, and a date that told you this content was fresh.
