@@ -80,4 +80,14 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/how-to-summarize-your-entire-chat-with-any-llm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-autonomy-tax-why-managed-ai-outperforms-autonomous-agents</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
