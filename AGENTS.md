@@ -10,7 +10,7 @@ To add a new article to the Vibecoding Playbook, follow these steps:
 
 2.  **Add Frontmatter:** At the beginning of the file, include the following frontmatter:
     *   `title`: The title of the article. This will be used to generate the URL slug.
-    *   `date`: The publication date in `YYYY-MM-DD` format.
+    *   `date`: The publication date in `YYYY-MM-DD` format. Check your current date.
     *   `index`: A unique, sequential number that determines the article's order in the navigation. This should be the next number after the highest existing index.
     *   `keywords`: A list of relevant keywords for SEO purposes.
 
@@ -28,5 +28,10 @@ To add a new article to the Vibecoding Playbook, follow these steps:
     ```
 
 3.  **Write the Article Content:** Write the article content in Markdown below the frontmatter. Follow the style and tone of the existing articles.
+    All content must follows this guidelines:
+    *   [Google Publisher Policies](https://support.google.com/adsense/answer/10502938)
+    *   [Google AdSense content and user experience](https://support.google.com/adsense/answer/10015918)
+    *   [Manual actions report](https://support.google.com/webmasters/answer/9044175)
+    *   [Spam policies for Google web search](https://support.google.com/publisherpolicies/answer/11035931)
 
 4.  **Verify the Build:** After adding the new article, run `npm run build` to ensure the site builds correctly and the new article is included in the prerendered pages. Check the `dist/client/articles` directory to confirm the new article's HTML file was generated.
