@@ -34,4 +34,4 @@ To add a new article to the Vibecoding Playbook, follow these steps:
     *   [Manual actions report](https://support.google.com/webmasters/answer/9044175)
     *   [Spam policies for Google web search](https://support.google.com/publisherpolicies/answer/11035931)
 
-4.  **Verify the Build:** After adding the new article, run `npm run build` to ensure the site builds correctly and the new article is included in the prerendered pages. Check the `dist/client/articles` directory to confirm the new article's HTML file was generated.
+4.  **Verify the Build:** After adding the new article, run `npm run build` to ensure the site builds correctly and the new article is included in the prerendered pages. Check the `dist/client/articles` directory to confirm the new article's HTML file was generated. And if you want to publish it, run `npm run deploy` to make the site live at GH-pages.
