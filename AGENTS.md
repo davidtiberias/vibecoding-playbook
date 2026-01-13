@@ -1,0 +1,32 @@
+# Agent Instructions
+
+This document provides instructions for AI agents working on this repository.
+
+## Adding New Articles
+
+To add a new article to the Vibecoding Playbook, follow these steps:
+
+1.  **Create a new Markdown file:** All articles are located in the `src/articles/` directory. Create a new file with a sequential name, following the `ArticleXXX.md` format (e.g., `Article013.md`).
+
+2.  **Add Frontmatter:** At the beginning of the file, include the following frontmatter:
+    *   `title`: The title of the article. This will be used to generate the URL slug.
+    *   `date`: The publication date in `YYYY-MM-DD` format.
+    *   `index`: A unique, sequential number that determines the article's order in the navigation. This should be the next number after the highest existing index.
+    *   `keywords`: A list of relevant keywords for SEO purposes.
+
+    Example:
+    ```yaml
+    ---
+    title: "Your New Article Title"
+    date: "2025-12-25"
+    index: 13
+    keywords:
+      - "keyword one"
+      - "keyword two"
+      - "keyword three"
+    ---
+    ```
+
+3.  **Write the Article Content:** Write the article content in Markdown below the frontmatter. Follow the style and tone of the existing articles.
+
+4.  **Verify the Build:** After adding the new article, run `npm run build` to ensure the site builds correctly and the new article is included in the prerendered pages. Check the `dist/client/articles` directory to confirm the new article's HTML file was generated.
