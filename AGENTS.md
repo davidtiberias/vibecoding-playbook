@@ -39,3 +39,7 @@ To add a new article to the Vibecoding Playbook, follow these steps:
 ## CI/CD Pipeline
 
 Before submitting any changes, ensure that the CI/CD pipeline passes. The pipeline is automatically triggered on every push to the `main` branch. You can check the status of the pipeline in the "Actions" tab of the GitHub repository.
+
+## Changelog
+
+- **2024-07-22:** Added `Article014.md`, "The Future of AI in Software Development: A Comprehensive Guide".
