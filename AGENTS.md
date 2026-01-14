@@ -35,3 +35,7 @@ To add a new article to the Vibecoding Playbook, follow these steps:
     *   [Spam policies for Google web search](https://support.google.com/publisherpolicies/answer/11035931)
 
 4.  **Verify the Build:** After adding the new article, run `npm run build` to ensure the site builds correctly and the new article is included in the prerendered pages. Check the `dist/client/articles` directory to confirm the new article's HTML file was generated. And if you want to publish it, run `npm run deploy` to make the site live at GH-pages.
+
+## CI/CD Pipeline
+
+Before submitting any changes, ensure that the CI/CD pipeline passes. The pipeline is automatically triggered on every push to the `main` branch. You can check the status of the pipeline in the "Actions" tab of the GitHub repository.
