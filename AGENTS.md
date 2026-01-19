@@ -39,3 +39,8 @@ To add a new article to the Vibecoding Playbook, follow these steps:
 ## CI/CD Pipeline
 
 Before submitting any changes, ensure that the CI/CD pipeline passes. The pipeline is automatically triggered on every push to the `main` branch. You can check the status of the pipeline in the "Actions" tab of the GitHub repository.
+
+## Changelog
+
+- **2024-07-29:** Added a new article, "Five Best Practices for Using AI Coding Assistants."
+- **2024-07-29:** Updated the CI/CD pipeline to automate testing and builds.
