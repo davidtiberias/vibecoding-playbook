@@ -1,7 +1,7 @@
 ---
 title: "The Importance of a CI/CD Pipeline"
-date: "2024-07-29"
-index: 14
+date: "2026-01-20"
+index: 20
 keywords:
   - "ci/cd"
   - "pipeline"
