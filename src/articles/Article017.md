@@ -1,7 +1,7 @@
 ---
 title: "The Unseen Guardian: Why CI/CD is Non-Negotiable for AI-Driven Software Development"
 date: "2026-01-14"
-index: 14
+index: 17
 keywords:
   - "CI/CD"
   - "AI software engineering"
