@@ -1,7 +1,7 @@
 ---
 title: "The Power of CI/CD: Building a Failsafe Pipeline for Your Future Self"
-date: "2026-01-14"
-index: 14
+date: "2026-01-16"
+index: 16
 keywords:
   - "CI/CD"
   - "continuous integration"
