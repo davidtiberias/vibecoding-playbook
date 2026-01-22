@@ -42,5 +42,4 @@ Before submitting any changes, ensure that the CI/CD pipeline passes. The pipeli
 
 ## Changelog
 
-- **2026-01-14:** Added `Article016.md` on "The Power of CI/CD: Building a Failsafe Pipeline for Your Future Self".
-- **2026-01-14:** Added `Article015.md`, "The Future of AI in Software Development: A Comprehensive Guide".
+- **2026-01-14:** Added `Article014.md` on "The Power of CI/CD: Building a Failsafe Pipeline for Your Future Self".

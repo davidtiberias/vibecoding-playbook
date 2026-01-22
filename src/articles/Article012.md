@@ -1,6 +1,6 @@
 ---
 title: "The Autonomy Tax: Why 'Managed' AI Outperforms 'Autonomous' Agents"
-date: "2025-01-12"
+date: "2025-12-24"
 index: 12
 keywords:
   - "AI agentic workflows"
