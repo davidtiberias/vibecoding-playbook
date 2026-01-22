@@ -1,7 +1,7 @@
 ---
 title: "The Unseen Guardian: How a CI/CD Pipeline Prevents Regressions"
 date: "2026-01-14"
-index: 14
+index: 17
 keywords:
   - "CI/CD"
   - "Continuous Integration"
