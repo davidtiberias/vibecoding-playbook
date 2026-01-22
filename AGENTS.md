@@ -42,6 +42,8 @@ Before submitting any changes, ensure that the CI/CD pipeline passes. The pipeli
 
 ## Changelog
 
+- **2024-07-29:** Added a new article, "Five Best Practices for Using AI Coding Assistants."
+- **2024-07-29:** Updated the CI/CD pipeline to automate testing and builds.
 - **2026-01-14:** Added `Article014.md` - "The Unseen Guardian: Why CI/CD is Non-Negotiable for AI-Driven Software Development".
 - **2026-01-17:** Added `Article014.md` on the importance of CI/CD pipelines.
 - **2026-01-14:** Added `Article014.md` - "The Unseen Guardian: How a CI/CD Pipeline Prevents Regressions".
