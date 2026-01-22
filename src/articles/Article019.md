@@ -1,7 +1,7 @@
 ---
 title: "Five Best Practices for Using AI Coding Assistants"
-date: "2024-07-29"
-index: 14
+date: "2026-01-19"
+index: 19
 keywords:
   - "AI"
   - "coding assistants"
