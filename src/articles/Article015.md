@@ -1,7 +1,7 @@
 ---
 title: "The Future of AI in Software Development: A Comprehensive Guide"
 date: "2026-01-14"
-index: 14
+index: 15
 keywords:
   - "AI in software development"
   - "future of coding"
