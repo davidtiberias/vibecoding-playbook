@@ -42,6 +42,7 @@ Before submitting any changes, ensure that the CI/CD pipeline passes. The pipeli
 
 ## Changelog
 
+- **2026-01-26:** Added `Article015.md` - "The Architect's Blueprint: Why a Solid Plan is Your Most Powerful Tool in AI-Driven Development".
 - **2024-07-29:** Added `Article014.md` on the importance of CI/CD pipelines and wrote the full content.
 - **2024-07-29:** Added a new article, "Five Best Practices for Using AI Coding Assistants."
 - **2024-07-29:** Updated the CI/CD pipeline to automate testing and builds.
