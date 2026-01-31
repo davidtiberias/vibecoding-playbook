@@ -7,5 +7,9 @@ test('verify articles page', async ({ page }) => {
   const articleTitle = page.locator('text="The Unseen Guardian: How a CI/CD Pipeline Prevents Regressions"');
   await expect(articleTitle).toBeVisible();
 
+  // Verify the newly added article
+  const newArticleTitle = page.locator('text="The Role of System Invariants in AI Development"');
+  await expect(newArticleTitle).toBeVisible();
+
   await page.screenshot({ path: 'tests/screenshot.png' });
 });
