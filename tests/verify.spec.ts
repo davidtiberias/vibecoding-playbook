@@ -7,5 +7,9 @@ test('verify articles page', async ({ page }) => {
   const articleTitle = page.locator('text="The Unseen Guardian: How a CI/CD Pipeline Prevents Regressions"');
   await expect(articleTitle).toBeVisible();
 
-  await page.screenshot({ path: 'tests/screenshot.png' });
+  // Verify that Article 015 title is visible
+  const article015Title = page.locator('text="The Silent Watchman: Automated Visual Regression Testing in AI Development"');
+  await expect(article015Title).toBeVisible();
+
+  await page.screenshot({ path: 'tests/screenshot.png', fullPage: true });
 });
