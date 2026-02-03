@@ -49,3 +49,6 @@ Before submitting any changes, ensure that the CI/CD pipeline passes. The pipeli
 - **2026-01-17:** Added `Article014.md` on the importance of CI/CD pipelines.
 - **2026-01-14:** Added `Article014.md` - "The Unseen Guardian: How a CI/CD Pipeline Prevents Regressions".
 - **2026-01-14:** Added `Article014.md` on "The Power of CI/CD: Building a Failsafe Pipeline for Your Future Self".
+- **2026-02-03:** Added `Article015.md` - "Deterministic AI Development: The Power of Context Management" to fill the gap in sequential articles.
+- **2026-02-03:** Created `scripts/agent-verify.sh` to provide a robust verification pipeline (lint, build, test) for maintainers.
+- **2026-02-03:** Updated `tests/verify.spec.ts` to automate verification of new content.
