@@ -49,3 +49,6 @@ Before submitting any changes, ensure that the CI/CD pipeline passes. The pipeli
 - **2026-01-17:** Added `Article014.md` on the importance of CI/CD pipelines.
 - **2026-01-14:** Added `Article014.md` - "The Unseen Guardian: How a CI/CD Pipeline Prevents Regressions".
 - **2026-01-14:** Added `Article014.md` on "The Power of CI/CD: Building a Failsafe Pipeline for Your Future Self".
+- **2026-02-05:** Added `Article015.md` - "Bridging the Gap: Integrating AI into Your CI/CD Workflow" to fill the numerical gap.
+- **2026-02-05:** Created a robust verification pipeline `scripts/agent-verify.sh` to automate linting, building, and testing without disrupting the environment.
+- **2026-02-05:** Updated `tests/verify.spec.ts` to include Article 015 verification.
