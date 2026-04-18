@@ -1,13 +1,13 @@
 ---
-title: "Getting Started with CI/CD: A Practical Guide"
-date: "2026-01-24"
-index: 15
+title: 'Getting Started with CI/CD: A Practical Guide'
+date: '2026-01-24'
+time: '12:00'
 keywords:
-  - "ci/cd"
-  - "getting started"
-  - "guide"
-  - "automation"
-  - "devops"
+  - ci/cd
+  - getting started
+  - guide
+  - automation
+  - devops
 ---
 
 Diving into the world of CI/CD can seem daunting, but it's one of the most impactful changes you can make to your development workflow. This guide will walk you through the essential first steps to get a basic CI/CD pipeline up and running.

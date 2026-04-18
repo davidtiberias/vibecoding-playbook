@@ -1,14 +1,14 @@
 ---
-title: "Why I Built the Vibecoding Playbook"
-date: "2025-12-23"
-index: 6
+title: Why I Built the Vibecoding Playbook
+date: '2025-12-23'
+time: '12:00'
 keywords:
-  - "Coding for non-programmers with AI"
-  - "Building software without coding"
-  - "AI workflow for architects"
-  - "Vibecoding case study"
-  - "From idea to website with AI"
-  - "RepoLiner origin story"
+  - Coding for non-programmers with AI
+  - Building software without coding
+  - AI workflow for architects
+  - Vibecoding case study
+  - From idea to website with AI
+  - RepoLiner origin story
 ---
 
 Let me be perfectly clear from the start: I’m not a system architect, a software architect, or any of the other prestigious engineering hats you find in the tech world. I am, by trade and training, an architect - the kind who designs physical buildings, coordinates contractors, and spends hours poring over construction drawings. My world is one of scale, materials, human use, and the unforgiving laws of physics. Code, for the most part, has been a foreign language.

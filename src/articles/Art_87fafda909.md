@@ -1,14 +1,16 @@
 ---
-title: "The Rise of the AI Software Engineer: Verification-Driven Development in a New Era"
-date: "2026-01-13"
-index: 13
+title: >-
+  The Rise of the AI Software Engineer: Verification-Driven Development in a New
+  Era
+date: '2026-01-13'
+time: '12:00'
 keywords:
-  - "AI software engineering"
-  - "verification-driven development"
-  - "future of software development"
-  - "AI in software development"
-  - "AI developer tools"
-  - "automated software engineering"
+  - AI software engineering
+  - verification-driven development
+  - future of software development
+  - AI in software development
+  - AI developer tools
+  - automated software engineering
 ---
 
 The software development landscape is on the cusp of a seismic shift, driven by the rapid evolution of artificial intelligence. The traditional role of a software engineer is being reimagined, giving rise to the **AI Software Engineer**—a new breed of developer who leverages AI as a core component of their toolkit. This new era is not about replacing human developers but about augmenting their capabilities, with a renewed focus on a critical, yet often overlooked, practice: **verification-driven development**.

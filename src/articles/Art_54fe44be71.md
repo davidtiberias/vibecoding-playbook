@@ -1,43 +1,43 @@
 ---
-title: "Getting Started with the Vibecoding Workflow"
-date: "2025-12-24"
-index: 8
+title: Getting Started with the Vibecoding Workflow
+date: '2025-12-24'
+time: '12:00'
 keywords:
-  - "Vibecoding tutorial"
-  - "How to start with AI coding"
-  - "Step-by-step AI development guide"
-  - "Google AI Studio workflow"
-  - "Repo dump tutorial"
-  - "Beginner guide to agentic coding"
-  - "What is vibecoding?"
-  - "Vibecoding guide for beginners"
-  - "How to start vibecoding"
-  - "Vibecoding workflow 2025"
-  - "AI coding best practices 2025"
-  - "Google AI Studio vs Antigravity"
-  - "Gemini 3 Pro vs Claude Code for coding"
-  - "Is Google Antigravity worth it?"
-  - "Cursor vs Windsurf vs Trae AI"
-  - "AI Studio context caching cost"
-  - "How to feed entire repo to ChatGPT"
-  - "Flatten code repository to markdown"
-  - "RepoLiner vs Repomix"
-  - "Prevent AI context loss in large projects"
-  - "Deterministic AI code generation"
-  - "The fragmentation tax AI"
-  - "Agentic orchestration vs vibe coding"
-  - "Vibecoding fragmentation tax"
-  - "Repo dump workflow"
-  - "AI Studio context caching cost"
-  - "How to feed entire repo to ChatGPT"
-  - "Flatten code repository to markdown"
-  - "RepoLiner vs Repomix"
-  - "Prevent AI context loss in large projects"
-  - "Deterministic AI code generation"
-  - "The fragmentation tax AI"
-  - "Agentic orchestration vs vibe coding"
-  - "Vibecoding fragmentation tax"
-  - "Repo dump workflow"
+  - Vibecoding tutorial
+  - How to start with AI coding
+  - Step-by-step AI development guide
+  - Google AI Studio workflow
+  - Repo dump tutorial
+  - Beginner guide to agentic coding
+  - What is vibecoding?
+  - Vibecoding guide for beginners
+  - How to start vibecoding
+  - Vibecoding workflow 2025
+  - AI coding best practices 2025
+  - Google AI Studio vs Antigravity
+  - Gemini 3 Pro vs Claude Code for coding
+  - Is Google Antigravity worth it?
+  - Cursor vs Windsurf vs Trae AI
+  - AI Studio context caching cost
+  - How to feed entire repo to ChatGPT
+  - Flatten code repository to markdown
+  - RepoLiner vs Repomix
+  - Prevent AI context loss in large projects
+  - Deterministic AI code generation
+  - The fragmentation tax AI
+  - Agentic orchestration vs vibe coding
+  - Vibecoding fragmentation tax
+  - Repo dump workflow
+  - AI Studio context caching cost
+  - How to feed entire repo to ChatGPT
+  - Flatten code repository to markdown
+  - RepoLiner vs Repomix
+  - Prevent AI context loss in large projects
+  - Deterministic AI code generation
+  - The fragmentation tax AI
+  - Agentic orchestration vs vibe coding
+  - Vibecoding fragmentation tax
+  - Repo dump workflow
 ---
 
 **_A beginner’s guide to building with AI, step by step_**

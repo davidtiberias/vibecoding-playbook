@@ -1,13 +1,15 @@
 ---
-title: "The Architect's Blueprint: Why a Solid Plan is Your Most Powerful Tool in AI-Driven Development"
-date: "2026-01-26"
-index: 15
+title: >-
+  The Architect's Blueprint: Why a Solid Plan is Your Most Powerful Tool in
+  AI-Driven Development
+date: '2026-01-26'
+time: '12:00'
 keywords:
-  - "AI development"
-  - "planning"
-  - "software architecture"
-  - "CI/CD"
-  - "verification"
+  - AI development
+  - planning
+  - software architecture
+  - CI/CD
+  - verification
 ---
 
 In the rapidly evolving landscape of AI-driven software development, it’s tempting to dive straight into coding, relying on the power of AI to figure things out as you go. However, this approach often leads to chaos, rework, and unpredictable outcomes. The most crucial yet often overlooked tool in your arsenal is a solid, well-defined plan. Just as an architect wouldn’t build a skyscraper without a blueprint, an AI developer shouldn’t build a complex system without a clear plan.

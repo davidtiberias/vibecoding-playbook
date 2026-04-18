@@ -21,42 +21,46 @@ export const data = async (pageContext: PageContext) => {
       return {
         slug,
         title: data.title || 'Untitled',
-        // Force index to be a number, default to 999 if missing to push to end
-        index: typeof data.index === 'number' ? data.index : 999,
         date: data.date || '1970-01-01',
+        time: data.time || '00:00',
         file 
       };
     }));
 
-  // 2. Sort by index explicitly
-  allArticles.sort((a, b) => a.index - b.index);
+  // 2. Sort by date and time
+  allArticles.sort((a, b) => {
+    const dtA = new Date(`${a.date}T${a.time}`);
+    const dtB = new Date(`${b.date}T${b.time}`);
+    return dtA.getTime() - dtB.getTime();
+  });
+
+  // Assign transient index
+  const articlesWithIndex = allArticles.map((a, i) => ({ ...a, index: i + 1 }));
 
   // 3. Find current article index
-  const currentIndex = allArticles.findIndex(a => a.slug === articleId);
+  const currentIndex = articlesWithIndex.findIndex(a => a.slug === articleId);
 
   if (currentIndex === -1) return { article: null };
 
   // 4. Get Content for current article
-  const currentMeta = allArticles[currentIndex];
+  const currentMeta = articlesWithIndex[currentIndex];
   const rawContent = await fs.readFile(path.join(articlesDir, currentMeta.file), 'utf-8');
-  // Extract 'data' (frontmatter) again to get keywords
   const { content, data: frontmatter } = matter(rawContent);
-  const match = currentMeta.file.match(/Article(\d+)\.md$/);
-  const id = match ? match[1] : currentMeta.file;
+  const id = currentMeta.file.replace('.md', '');
 
   const article = {
     id,
     index: currentMeta.index,
     title: currentMeta.title,
     date: currentMeta.date,
+    time: currentMeta.time,
     content,
-    // Pass the keywords array, or default to empty
     keywords: frontmatter.keywords || [] 
   };
 
   // 5. Get Prev/Next
-  const prevArticle = currentIndex > 0 ? allArticles[currentIndex - 1] : null;
-  const nextArticle = currentIndex < allArticles.length - 1 ? allArticles[currentIndex + 1] : null;
+  const prevArticle = currentIndex > 0 ? articlesWithIndex[currentIndex - 1] : null;
+  const nextArticle = currentIndex < articlesWithIndex.length - 1 ? articlesWithIndex[currentIndex + 1] : null;
 
   return {
     article,

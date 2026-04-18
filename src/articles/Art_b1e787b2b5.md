@@ -1,14 +1,16 @@
 ---
-title: "The Unseen Guardian: Why CI/CD is Non-Negotiable for AI-Driven Software Development"
-date: "2026-01-18"
-index: 17
+title: >-
+  The Unseen Guardian: Why CI/CD is Non-Negotiable for AI-Driven Software
+  Development
+date: '2026-01-18'
+time: '12:00'
 keywords:
-  - "CI/CD"
-  - "AI software engineering"
-  - "DevOps for AI"
-  - "continuous integration"
-  - "continuous delivery"
-  - "automated testing"
+  - CI/CD
+  - AI software engineering
+  - DevOps for AI
+  - continuous integration
+  - continuous delivery
+  - automated testing
 ---
 
 In the burgeoning field of AI-driven software development, the focus is often on the sophisticated models and algorithms that power intelligent applications. However, the unsung hero that ensures the reliability, stability, and scalability of these systems is the **Continuous Integration/Continuous Delivery (CI/CD) pipeline**. For the AI Software Engineer, a robust CI/CD pipeline is not a luxury—it is an absolute necessity.

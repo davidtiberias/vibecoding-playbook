@@ -1,14 +1,14 @@
 ---
-title: "Why We Flatten the Repo: Feeding the Beast "
-date: "2025-12-23"
-index: 5
+title: 'Why We Flatten the Repo: Feeding the Beast '
+date: '2025-12-23'
+time: '12:00'
 keywords:
-  - "LLM context window strategy"
-  - "Flattening code repositories"
-  - "AI cross-file reasoning"
-  - "Reducing AI hallucinations in code"
-  - "Optimizing context for Gemini Pro"
-  - "Single file code dump"
+  - LLM context window strategy
+  - Flattening code repositories
+  - AI cross-file reasoning
+  - Reducing AI hallucinations in code
+  - Optimizing context for Gemini Pro
+  - Single file code dump
 ---
 
 Every developer knows the pain of context. Your repo is a sprawling city: source files tucked into alleys, configs hidden in basements, and scripts scattered like flyers on a busy street. For humans, this is manageable - we navigate folders, open tabs, and piece together the story. For large language models, though, this chaos is kryptonite.

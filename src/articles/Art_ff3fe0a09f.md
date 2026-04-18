@@ -1,12 +1,12 @@
 ---
-title: "The Importance of a CI/CD Pipeline"
-date: "2026-01-20"
-index: 20
+title: The Importance of a CI/CD Pipeline
+date: '2026-01-20'
+time: '12:00'
 keywords:
-  - "ci/cd"
-  - "pipeline"
-  - "automation"
-  - "devops"
+  - ci/cd
+  - pipeline
+  - automation
+  - devops
 ---
 
 In modern software development, a CI/CD pipeline is not just a best practice; it's a necessity for teams that want to deliver high-quality software quickly and reliably. CI/CD, which stands for Continuous Integration and Continuous Delivery/Deployment, is a set of automated practices that streamline the software development lifecycle, from code changes to deployment.

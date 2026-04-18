@@ -6,12 +6,12 @@ This document provides instructions for AI agents working on this repository.
 
 To add a new article to the Vibecoding Playbook, follow these steps:
 
-1.  **Create a new Markdown file:** All articles are located in the `src/articles/` directory. Create a new file with a sequential name, following the `ArticleXXX.md` format (e.g., `Article013.md`).
+1.  **Create a new Markdown file:** All articles are located in the `src/articles/` directory. Create a new file with a robust name following the `Art_[hash].md` format. Use a short hash of the content or title to avoid merge conflicts.
 
 2.  **Add Frontmatter:** At the beginning of the file, include the following frontmatter:
     *   `title`: The title of the article. This will be used to generate the URL slug.
     *   `date`: The publication date in `YYYY-MM-DD` format. Check your current date.
-    *   `index`: A unique, sequential number that determines the article's order in the navigation. This should be the next number after the highest existing index.
+    *   `time`: The publication time in `HH:MM` format. This, combined with date, determines the article's order.
     *   `keywords`: A list of relevant keywords for SEO purposes.
 
     Example:
@@ -19,7 +19,7 @@ To add a new article to the Vibecoding Playbook, follow these steps:
     ---
     title: "Your New Article Title"
     date: "2025-12-25"
-    index: 13
+    time: "14:30"
     keywords:
       - "keyword one"
       - "keyword two"
@@ -27,7 +27,7 @@ To add a new article to the Vibecoding Playbook, follow these steps:
     ---
     ```
 
-3.  **Write the Article Content:** Write the article content in Markdown below the frontmatter. Follow the style and tone of the existing articles.
+3.  **Write the Article Content:** Write the article content in Markdown below the frontmatter. The article index is automatically calculated based on the `date` and `time` sorting.
     All content must follows this guidelines:
     *   [Google Publisher Policies](https://support.google.com/adsense/answer/10502938)
     *   [Google AdSense content and user experience](https://support.google.com/adsense/answer/10015918)

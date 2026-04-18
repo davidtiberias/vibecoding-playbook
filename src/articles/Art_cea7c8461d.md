@@ -1,15 +1,15 @@
 ---
-title: "The Autonomy Tax: Why 'Managed' AI Outperforms 'Autonomous' Agents"
-date: "2025-12-24"
-index: 12
+title: 'The Autonomy Tax: Why ''Managed'' AI Outperforms ''Autonomous'' Agents'
+date: '2025-12-24'
+time: '12:00'
 keywords:
-  - "AI agentic workflows"
-  - "autonomous AI vs managed AI"
-  - "AI development methodologies"
-  - "optimizing AI tool usage"
-  - "AI project management"
-  - "Anthropic AI agents"
-  - "LLM development workflows"
+  - AI agentic workflows
+  - autonomous AI vs managed AI
+  - AI development methodologies
+  - optimizing AI tool usage
+  - AI project management
+  - Anthropic AI agents
+  - LLM development workflows
 ---
 
 A new paradigm is emerging in AI-driven development, but it’s not the one you think. While the industry fixates on creating fully autonomous agents, a quieter, more effective methodology is delivering superior results: **Managed AI**. This approach, which emphasizes human-led, structured workflows, consistently outperforms its autonomous counterparts by avoiding the hidden costs of the "Autonomy Tax."
