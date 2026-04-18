@@ -181,7 +181,7 @@ const Articles: React.FC = () => {
 
             {/* Content Body */}
             <div className="p-8 lg:p-12">
-               <div className="prose max-w-none prose-slate prose-headings:font-bold prose-headings:tracking-tight prose-a:text-indigo-600 prose-img:rounded-2xl prose-code:text-indigo-600 prose-code:bg-indigo-50 prose-code:px-1 prose-code:rounded prose-code:before:content-none prose-code:after:content-none">
+                <div className="prose max-w-none prose-slate prose-headings:font-bold prose-headings:tracking-tight prose-a:text-indigo-600 prose-img:rounded-2xl prose-code:text-indigo-700 prose-code:bg-slate-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:font-medium prose-code:before:content-none prose-code:after:content-none prose-pre:bg-slate-900 prose-pre:text-slate-100 prose-pre:rounded-2xl prose-pre:shadow-lg">
                   <ReactMarkdown remarkPlugins={[remarkGfm]}>
                      {selectedArticle.content}
                   </ReactMarkdown>
