@@ -56,7 +56,10 @@ const ArticlePage: React.FC = () => {
 
              {/* Content */}
              <div className="p-8 lg:p-12">
-                <div className="prose max-w-none prose-slate prose-headings:font-bold prose-headings:tracking-tight prose-a:text-indigo-600 prose-img:rounded-2xl prose-code:text-indigo-700 prose-code:bg-slate-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:font-medium prose-code:before:content-none prose-code:after:content-none prose-pre:bg-slate-900 prose-pre:text-slate-100 prose-pre:rounded-2xl prose-pre:shadow-lg">
+                <div className="prose max-w-none prose-slate prose-headings:font-bold prose-headings:tracking-tight prose-a:text-indigo-600 prose-img:rounded-2xl 
+                    prose-code:text-indigo-700 prose-code:bg-slate-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:font-medium prose-code:before:content-none prose-code:after:content-none 
+                    prose-pre:bg-slate-900 prose-pre:text-slate-100 prose-pre:rounded-2xl prose-pre:shadow-lg
+                    [&_pre_code]:text-slate-100 [&_pre_code]:bg-transparent [&_pre_code]:p-0 [&_pre_code]:font-normal">
                   <ReactMarkdown remarkPlugins={[remarkGfm]}>
                     {article.content}
                   </ReactMarkdown>
