@@ -31,12 +31,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-fragmentation-tax-why-ai-studio-is-the-warren-buffett-of-vibecoding</loc>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/bridging-the-gap-integrating-ai-into-your-cicd-workflow</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-landscape-of-software-engineering-in-late-2025</loc>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-cornerstone-of-success-setting-up-a-rock-solid-development-environment</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -46,7 +46,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/repoliner-the-brutalist-grade-code-consolidator</loc>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/getting-started-with-cicd-a-practical-guide</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/deterministic-ai-development-the-power-of-context-management</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -56,7 +61,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/why-i-built-the-vibecoding-playbook</loc>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-seo-recursion-how-i-vibecoded-the-search-result-you-just-clicked</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-landscape-of-software-engineering-in-late-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/five-best-practices-for-using-ai-coding-assistants</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -71,22 +86,97 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/iteration-over-perfection-how-i-shape-ai-into-my-voice</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-seo-recursion-how-i-vibecoded-the-search-result-you-just-clicked</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/how-to-summarize-your-entire-chat-with-any-llm</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-fragmentation-tax-why-ai-studio-is-the-warren-buffett-of-vibecoding</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-power-of-cicd-building-a-failsafe-pipeline-for-your-future-self</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/repoliner-the-brutalist-grade-code-consolidator</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/iteration-over-perfection-how-i-shape-ai-into-my-voice</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-role-of-system-invariants-in-ai-development</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-silent-watchman-automated-visual-regression-testing-in-ai-development</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-importance-of-a-correct-environment-setup</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-rise-of-the-ai-software-engineer-verification-driven-development-in-a-new-era</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-unseen-guardian-why-cicd-is-non-negotiable-for-ai-driven-software-development</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-human-in-the-loop-why-oversight-is-the-heart-of-verification-driven-development</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-autonomy-tax-why-managed-ai-outperforms-autonomous-agents</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-unseen-architect-why-a-well-configured-environment-is-your-most-powerful-tool</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-architects-blueprint-why-a-solid-plan-is-your-most-powerful-tool-in-ai-driven-development</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-unseen-guardian-how-a-cicd-pipeline-prevents-regressions</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/advanced-prompt-engineering-steering-ai-for-complex-software-tasks</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-power-of-the-mental-reset-why-context-resets-are-key-in-ai-driven-development</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/why-i-built-the-vibecoding-playbook</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://davidtiberias.github.io/vibecoding-playbook/articles/the-importance-of-a-cicd-pipeline</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
